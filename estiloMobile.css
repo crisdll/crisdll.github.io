@@ -20,44 +20,44 @@
     }
 	
 	h1{
-		font-size: 140px;
+		font-size: 40px;
 		margin: 0px;
-		line-height:140px;
+		line-height: 40px;
 	}
 	
 	h2{
-	    font-size: 70px;
-	    padding: 40px 70px;
+	    font-size: 30px;
+	    padding: 30px 20px;
 	}
 	
 	h3{
-		font-size: 35px;
+		font-size: 27px;
 	}
 	
 	h4{
-		font-size:30px;
+		font-size: 23px;
 		margin: 1.5vw 0px;
 		line-height: 42px;
 	}
 	
 	p{
-		font-size:18px;
+		font-size: 15px;
 		margin:0px;
-		padding: 30px 0px;
+		padding: 10px 0px;
 		line-height: 28px;
 	}
 	
 	p a {
-      padding: 30px 0px; 
+      padding: 10px 0px;
     }
 	
 	button{
 		margin: 30px 0px;
-		padding: 28px 10px;
+		padding: 20px 10px;
 		border-radius: 100px;
 		border: solid 1px;
 		width:180px;
-	 }
+		}
 	
 
     
@@ -76,7 +76,7 @@
 	#confirmar > div,
 	#viaje > div,
 	#participa > div 	{
-      padding: 0px 70px;
+      padding: 0px 20px;
     }
 	  
 #inicio{
@@ -106,21 +106,21 @@
 	  font-size:20px;
     }
 	#inicio .bajo-cuenta >p {
-	  font-size: 20px;
+	  font-size: 15px;
 	  }
 
     #inicio .imagen {
-      max-width: 600px;
-      max-height: 800px;
+      max-width: 100%;
+      max-height: 350px;
     }
 
     #solapado {
-		height: 100px;
-    }
+		height: 0px;
+		}
 	
 	#horario .imagen{
-		max-width: 360px;
-    		height: 526px;
+		/* max-width: 360px; */
+		height: 480px;
 	}
 
     #horario .timeline {
@@ -157,14 +157,14 @@
 		max-width:540px
 	}
 	#confirmar{
-		padding-top: 70px;
+		padding-top: 20px;
 	}
 	
 	#confirmar >img{
-		max-height:500px;
+		max-height: 300px;
 	}
 	#confirmar > div > h4{
-	    margin: 70px 130px;
+	    margin: 20px 20px;
 	}
 	
 #confirmar >div > div:nth-child(3){
@@ -174,10 +174,11 @@
             #confirmar >div > div:nth-child(3) >div {
                 width: 100%; /* Ancho completo en móviles */
                 margin-bottom: 10px; /* Margen inferior entre imágenes en móviles */
+                height: 300px;
             }
 
 	#participa h2{
-		font-size: 100px;
+		font-size: 36px;
 		text-align: center;
 	}
         }
