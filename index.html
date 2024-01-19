@@ -121,6 +121,11 @@
 	.active{
       color: var(--green-medium)
     }
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    }
 	
 	
 	#inicio{
@@ -178,11 +183,6 @@
       max-height: 800px;
     }
 
-    #inicio .imagen img {
-      width: 100%;
-      height: auto;
-    }
-
     #solapado {
 		height: 100px;
 		background-color: var(--bg-overlay-color);
@@ -196,7 +196,10 @@
       padding: 20px;
 	  
     }
-	
+	#horario .imagen{
+		max-width: 360px;
+    		height: 526px;
+	}
 
     #horario .timeline {
 	  position: relative;
@@ -298,7 +301,7 @@
   <section id="horario">
     <h2>Horario</h2>
 	<div>
-		<div>
+		<div class="imagen">
 			<img src="images/Wanda.jpg" alt="Imagen Casamiento">
 		</div>
 		<div class="timeline">
