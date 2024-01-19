@@ -236,4 +236,9 @@
 	    max-height: 400px;
             overflow: hidden;
         }
+
+	#participa h2{
+		font-size: 100px;
+		text-align: center;
+	}
 }
