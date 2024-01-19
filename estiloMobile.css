@@ -122,10 +122,13 @@
 		height: 0px;
 		}
 	
-	#horario .imagen{
-		/* max-width: 360px; */
-		height: 480px;
-	}
+
+#horario h4{
+	margin: 15px 0px;
+}
+#horario .imagen{
+	height: 480px;
+}
 
     #horario .timeline {
 	  margin-left: 25px;
@@ -149,7 +152,7 @@
 	    height: 10px;
 	    left: -6px;
 	    border: 2px solid var(--bg-overlay-color);
-	    top: 34px;
+	    top: 30px;
 	}
 	
 	#confirmar > div > div:nth-child(1),
