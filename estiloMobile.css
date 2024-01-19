@@ -1,1 +1,11 @@
-
+ /* Estilos para dispositivos móviles */
+        @media (max-width: 767px) {
+            #confirmar >div > div:nth-child(3){
+                flex-direction: column; 
+                margin: 0px 10px; /* Margen exterior para móviles */
+            }
+            #confirmar >div > div:nth-child(3) >div {
+                width: 100%; /* Ancho completo en móviles */
+                margin-bottom: 10px; /* Margen inferior entre imágenes en móviles */
+            }
+        }
