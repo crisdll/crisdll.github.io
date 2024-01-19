@@ -181,6 +181,7 @@
                 width: 100%; /* Ancho completo en móviles */
                 margin-bottom: 10px; /* Margen inferior entre imágenes en móviles */
                 height: 300px;
+		overflow: hidden;
             }
 
 	#participa h2{
