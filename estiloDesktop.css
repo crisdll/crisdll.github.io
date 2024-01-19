@@ -1,0 +1,288 @@
+:root {
+		--bg-overlay-color: #cadcd2;
+		--green-medium: rgb(84, 130, 111);
+	}
+  
+    body {
+      margin: 0;
+      font-family: Montserrat;
+      background-color: white;
+    }
+
+    header, footer {
+      padding: 10px 60px;
+      text-align: center;
+      width: 100%;
+      z-index: 1000;
+	  box-sizing: border-box;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+	  background-color: white;
+	  opacity:0.9;
+	  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+	  font-size:15px;
+	  display:flex;
+	  justify-content: space-between;
+	  align-items: center;
+    }
+	  header img { 
+		  max-width:60px;
+	  }
+
+		  
+	
+	footer {
+      bottom: 0;
+      width: 100%;
+	  background-color: var(--bg-overlay-color);
+	  padding:30px;
+    }
+	
+	h1{
+		font-family: 'Cormorant Garamond', sans-serif;
+		font-weight: 100;
+		font-size: 11vw;
+		margin: 0px;
+		line-height:140px;
+	}
+	
+	h2{
+	    font-size: 70px;
+	    padding: 40px 70px;
+	    font-family: 'Cormorant Garamond', sans-serif;
+	    font-weight: 100;
+	    margin: 0;
+	}
+	
+	h3{
+		font-size: 2.7vw;
+		font-family: 'Cormorant Garamond', sans-serif;
+		font-weight: 100;
+	}
+	
+	h4{
+		font-size: 2.4vw;
+		margin: 1.5vw 0px;
+		line-height: 3.4vw;
+		font-family: Montserrat;
+		font-weight: 100;
+	}
+	
+	p{
+		font-size:18px;
+		margin:0px;
+		padding: 2.4vw 0px;
+		text-align:left;
+		line-height: 28px;
+		font-family: Montserrat;
+		font-weight: 100;
+	}
+	
+	p a {
+      padding: 30px 0px; 
+	  color: black;
+      display: inline-block; 
+    }
+	
+	button{
+		margin: 30px 0px;
+		padding: 28px 10px;
+		border-radius: 100px;
+		background: transparent;
+		border: solid 1px;
+		width:180px;
+	 }
+	
+
+    nav {
+      float: right;
+    }
+
+    nav a {
+	  color:black;
+      text-decoration: none;
+      margin: 0 10px;
+      padding: 5px;
+    }
+
+    nav a:hover,
+	.active{
+      color: var(--green-medium)
+    }
+img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    display: block;
+    }
+	
+	
+	
+	
+	#horario,  #viaje, #participa {
+	    padding: 20px 0px;
+	}
+
+	#inicio > div,
+	#horario > div,
+	#confirmar > div,
+	#viaje > div,
+	#participa > div 	{
+      padding: 0px 70px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+	  
+#inicio{
+	margin-top: 80px; 
+}
+
+    #inicio .texto {
+      text-align: left;
+      max-width: 500px;
+      margin-right: 10px;
+    }
+
+    #inicio .mensaje {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    #inicio .mensaje p {
+      margin: 5px 0;
+    }
+
+    #inicio .cuenta-atras {
+      text-align: left;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    #inicio .bajo-cuenta {
+      text-align: left;
+      margin-top: 10px;
+      width: 100%;
+	  font-size:20px;
+    }
+	#inicio .bajo-cuenta >p {
+	  font-size: 1.55vw;
+	  }
+
+    #inicio .imagen {
+      text-align: right;
+      position: relative; /* Añadido para posicionar correctamente el div solapado */
+      overflow: hidden;
+      max-width: 600px;
+      max-height: 800px;
+    }
+
+    #solapado {
+		height: 100px;
+		background-color: var(--bg-overlay-color);
+    }
+	
+	#horario,#viaje{
+	background-color: var(--bg-overlay-color);
+	}
+
+	#horario .imagen{
+		max-width: 360px;
+    		height: 526px;
+	}
+
+    #horario .timeline {
+	  position: relative;
+	  max-width: 1200px;
+	  margin: 0 auto;
+	}
+
+	/* The actual timeline (the vertical ruler) */
+	#horario .timeline::after {
+	  content: '';
+	  position: absolute;
+	  width: 4px;
+	  background-color: black;
+	  top: 0;
+	  bottom: 0;
+	  border-radius: 30px;
+	}
+
+	/* Container around content */
+	#horario .container {
+	  padding: 1px 30px;
+	  position: relative;
+	  background-color: inherit;
+	}
+
+	/* The circles on the timeline */
+	#horario .container::after {
+	  content: '';
+	  position: absolute;
+	  width: 12px;
+	  height: 12px;
+	  left: -6px;
+	  background-color: black;
+	  border: 2px solid var(--bg-overlay-color);
+	  top: 28px;
+	  border-radius: 50%;
+	  z-index: 1;
+	}
+	
+	#confirmar > div > div:nth-child(1),
+	#participa > div > div:nth-child(1){
+		max-width:420px
+	}
+	
+	#confirmar > div > div:nth-child(2),
+	#participa > div > div:nth-child(2){
+		max-width:540px
+	}
+	#confirmar{
+		padding-top: 70px;
+	}
+	#confirmar button{
+		display: block;
+    		margin-left: auto;
+	}
+	#confirmar >img{
+		max-height:500px;
+	}
+	#confirmar > div > h4{
+	    margin: 70px 130px;
+	}
+	#confirmar >div > div:nth-child(3){
+            display: flex;
+            justify-content: space-between; 
+	    margin: 40px -70px 0 -70px
+        }
+
+        #confirmar >div > div:nth-child(3) >div {
+            width: 33%; /* Establece el ancho de cada imagen en desktop */
+	    max-height: 400px;
+            overflow: hidden;
+        }
+
+	  /* Estilos para dispositivos móviles */
+        @media (max-width: 767px) {
+            #confirmar >div > div:nth-child(3){
+                flex-direction: column; 
+                margin: 0px 10px; /* Margen exterior para móviles */
+            }
+            #confirmar >div > div:nth-child(3) >div {
+                width: 100%; /* Ancho completo en móviles */
+                margin-bottom: 10px; /* Margen inferior entre imágenes en móviles */
+            }
+        }
+	  
+	#viaje > div > div {
+		display:flex;
+		flex-wrap:wrap;
+		justify-content:space-between;
+		width:100%
+	}
+	
