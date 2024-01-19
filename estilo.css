@@ -178,10 +178,7 @@ img {
 	background-color: var(--bg-overlay-color);
 	}
 	
-	#confirmar button{
-		display: block;
-    		margin-left: auto;
-	}
+	
 	
 	#viaje > div > div {
 		display:flex;
