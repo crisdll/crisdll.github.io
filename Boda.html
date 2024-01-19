@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tu Sitio</title>
+
+  <!-- Enlace a Google Fonts -->
+  <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Montserrat">
+  
+  <style>
+  
+	:root {
+		--bg-overlay-color: #cadcd2;
+		--green-medium: rgb(84, 130, 111);
+	}
+  
+    body {
+      margin: 0;
+      font-family: Montserrat;
+      background-color: white;
+    }
+
+    header, footer {
+      padding: 10px 60px;
+      text-align: center;
+      width: 100%;
+      z-index: 1000;
+	  box-sizing: border-box;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+	  background-color: white;
+	  opacity:0.9;
+	  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+	  font-size:15px;
+	  display:flex;
+	  justify-content: space-between;
+	  align-items: center;
+    }
+	
+	footer {
+      bottom: 0;
+      width: 100%;
+	  background-color: var(--bg-overlay-color);
+	  padding:30px;
+    }
+	
+	h1{
+		font-family: 'Cormorant Garamond', sans-serif;
+		font-weight: 100;
+		font-size:140px;
+		margin: 0px;
+		line-height:140px;
+		
+	}
+	
+	h2{
+		font-size: 70px;
+		margin: 40px 70px;
+		font-family: 'Cormorant Garamond', sans-serif;
+		font-weight: 100;
+	}
+	
+	h3{
+		font-size: 35px;
+		font-family: 'Cormorant Garamond', sans-serif;
+		font-weight: 100;
+		
+	}
+	
+	h4{
+		font-size:30px;
+		margin: 18px 0px;
+		line-height:42px;
+		font-family: Montserrat;
+		font-weight: 100;
+	}
+	
+	p{	
+		font-size:18px;
+		margin:0px;
+		padding: 30px 0px; 
+		text-align:left;
+		line-height: 28px;
+		font-family: Montserrat;
+		font-weight: 100;
+	}
+	
+	p a {
+      padding: 30px 0px; 
+	  color: black;
+      display: inline-block; 
+    }
+	
+	button{
+		margin: 30px 0px;
+		padding: 20px 10px;
+		border-radius: 100px;
+		background: transparent;
+		border: solid 1px;
+		width:180px;
+	 }
+	
+
+    nav {
+      float: right;
+    }
+
+    nav a {
+	  color:black;
+      text-decoration: none;
+      margin: 0 10px;
+      padding: 5px;
+    }
+
+    nav a:hover,
+	.active{
+      color: var(--green-medium)
+    }
+	
+	
+	#inicio{
+		margin-top: 80px; 
+	}
+
+	#inicio > div,
+	#horario > div,
+	#confirmar > div,
+	#viaje > div,
+	#participa > div 	{
+      padding: 0px 70px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    #inicio .texto {
+      text-align: left;
+      max-width: 500px;
+      margin-right: 10px;
+    }
+
+    #inicio .mensaje {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    #inicio .mensaje p {
+      margin: 5px 0;
+    }
+
+    #inicio .cuenta-atras {
+      text-align: left;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    #inicio .bajo-cuenta {
+      text-align: left;
+      margin-top: 10px;
+      width: 100%;
+	  font-size:20px;
+    }
+	#inicio .bajo-cuenta >p {
+	  font-size:20px;
+    }
+
+    #inicio .imagen {
+      text-align: right;
+      position: relative; /* Añadido para posicionar correctamente el div solapado */
+      overflow: hidden;
+    }
+
+    #inicio .imagen img {
+      width: 100%;
+      height: auto;
+    }
+
+    #solapado {
+		height: 100px;
+		background-color: var(--bg-overlay-color);
+    }
+	
+	#horario,#viaje{
+	background-color: var(--bg-overlay-color);
+	}
+
+    #horario, #confirmar, #viaje, #participa {
+      padding: 20px;
+	  
+    }
+	
+
+    #horario .timeline {
+	  position: relative;
+	  max-width: 1200px;
+	  margin: 0 auto;
+	}
+
+	/* The actual timeline (the vertical ruler) */
+	#horario .timeline::after {
+	  content: '';
+	  position: absolute;
+	  width: 4px;
+	  background-color: black;
+	  top: 0;
+	  bottom: 0;
+	  border-radius: 30px;
+	}
+
+	/* Container around content */
+	#horario .container {
+	  padding: 1px 30px;
+	  position: relative;
+	  background-color: inherit;
+	}
+
+	/* The circles on the timeline */
+	#horario .container::after {
+	  content: '';
+	  position: absolute;
+	  width: 12px;
+	  height: 12px;
+	  left: -6px;
+	  background-color: black;
+	  border: 2px solid var(--bg-overlay-color);
+	  top: 28px;
+	  border-radius: 50%;
+	  z-index: 1;
+	}
+	
+	#confirmar > div > div:nth-child(1),
+	#participa > div > div:nth-child(1){
+		max-width:420px
+	}
+	
+	#confirmar > div > div:nth-child(2),
+	#participa > div > div:nth-child(2){
+		max-width:540px
+	}
+	
+	#viaje > div > div {
+		display:flex;
+		flex-wrap:wrap;
+		justify-content:space-between;
+		width:100%
+	}
+	
+
+	
+  </style>
+</head>
+<body>
+  <header>
+    <img src="tu_logo.png" alt="Logo" style="height: 40px;">
+    <nav>
+      <a href="#inicio">INICIO</a>
+      <a href="#horario">HORARIO</a>
+      <a href="#confirmar">CONFRIMAR ASISTENCIA</a>
+      <a href="#viaje">VIAJE Y ESTANCIA</a>
+      <a href="#participa">PARTICIPA</a>
+    </nav>
+  </header>
+
+
+	<section id="inicio">
+		<div>
+			<h3>Nos vamos a casar</h3>
+			<h1> ARIAN & CRISTINA </h1>
+			<div class="texto">
+			  <div class="mensaje">
+				<h4>Y nos haría mucha ilusión compartir este día especial contigo</h4>
+			  </div>
+			  <div class="cuenta-atras" id="cuentaAtras">
+				<!-- Cuenta atrás se mostrará aquí -->
+			  </div>
+			  <div class="bajo-cuenta">
+				<p>Sábado, 10 de mayo de 2025<br>
+					La Hacienda [del hogar gallego], <br> 
+					Sant Cebrià de Vallalta
+				</p>
+			  </div>
+			</div>
+			<div class="imagen">
+			  <img src="imagen_casamiento.jpg" alt="Imagen Casamiento">
+			</div>
+		</div>
+		<div id="solapado"></div>
+	</section>
+
+  <section id="horario">
+    <h2>Horario</h2>
+	<div>
+		<div>
+			<img src="imagen_casamiento.jpg" alt="Imagen Casamiento">
+		</div>
+		<div class="timeline">
+		  <div class="container">
+			  <h4>12:00 - Llegada de invitados</h4>
+		  </div>
+		  <div class="container">
+			  <h4>12:30 - Ceremonia</h4>
+		  </div>
+		  <div class="container">
+			  <h4>13:30 - Aperitivo</h4>
+		  </div>
+		  <div class="container">
+			  <h4>15:30 - Comida</h4>
+		  </div>
+		  <div class="container">
+			  <h4>18:30 - Baile</h4>
+		  </div>
+		  <div class="container">
+			  <h4>22:30 - Fin de la Fiesta
+				<br><span style="font-size:18px"> o no...</span>
+		  </div>
+		</div>
+	</div>
+  </section>
+
+  <section id="confirmar">
+	<div>
+		<div>
+			<h4>¿Nos acompañas o te lo pierdes?</h4>
+		</div>
+		<div>
+			<p>
+				Para confirmar tu asistencia a la boda sólo tienes que rellenar el siguiente formulario.
+			</p>
+			<button> CONFIRMA ASISTENCIA </button>
+		</div>
+			
+		<div>
+			<img src="imagen_casamiento.jpg" alt="Imagen Casamiento">
+			<img src="imagen_casamiento.jpg" alt="Imagen Casamiento">
+			<img src="imagen_casamiento.jpg" alt="Imagen Casamiento">
+		</div>
+		<h4>
+		- Asere, ¿qué volá?
+		<br><br>		
+		-¡Mi socio! Nada, aquí en la movida. Me tiro pa' la fiesta del año, ¡vete pa' allá que se va a poner bueno! Música, ron, y un bonche de gente buena.
+		<br><br>	
+		- ¡Dale, seguro me apunto! ¡Nos vemos allá, compay!
+		</h4>
+	</div>
+	<img src="imagen_casamiento.jpg" alt="Imagen Casamiento">
+  </section>
+
+  <section id="viaje">
+  <h2>Viaje y estancia</h2>
+	<div>
+		<div>
+			<div>
+				<h3> 01. Cómo llegar </h3>
+				<p> Instrucciones para llegar al evento <br> <a href="https://www.ejemplo.com">MAPA Y DETALLES</a> <p>
+			</div>
+			<div>
+				<h3> 02. Dónde alojarse </h3>
+				<p> Hoteles y B&Bs para consultar <br> <a href="https://www.ejemplo.com">OPCIÓN DE HOTELES</a> <p>
+			</div>
+			<div>
+				<h3> 03. Cuando estés allí </h3>
+				<p> Cosas divertidas que hacer en la zona <br> <a href="https://www.ejemplo.com">LAS RECOMENDACIONES</a> <p>
+			</div>
+		</div>
+	</div>  
+  </section>
+
+  <section id="participa">
+    <div>
+		<div>
+			<h4>¡Participa en nuestra fiesta!</h4>
+			<p>
+				Éste es un dia muy especial para nosotros, pero queremos que también sea un día especial para cada uno de vosotros. Por eso, te invitamos a ser parte de nuestra banda sonora.
+				<br>
+				¿Cuál es esa canción que te hace sonreír, bailar o recordar momentos increíbles? ¡Cuéntanos! Deja tus sugerencias abajo y hagamos juntos que este día sea único
+			</p>
+			<button> PARTICIPA </button>
+		</div>
+		<div>
+			<img src="imagen_casamiento.jpg" alt="Imagen Casamiento">
+		</div>		
+	</div>
+	<h2 style="font-size: 100px;text-align: center;"> ¡Esperamos verte! </h2>
+  </section>
+
+  <script>
+    // Calcula la cuenta atrás
+    function actualizarCuentaAtras() {
+      var fechaEvento = new Date('2025-05-10T12:00:00'); // Fecha y hora del evento
+      var fechaActual = new Date(); // Fecha y hora actuales
+
+      var diferencia = fechaEvento - fechaActual;
+      var dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+      var horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+
+      document.getElementById('cuentaAtras').innerHTML =
+        dias + 'd ' + horas + 'h ' + minutos + 'm';
+    }
+	
+	function sectionSelection() {
+      var sections = document.querySelectorAll('section');
+      var navLinks = document.querySelectorAll('nav a');
+
+      sections.forEach(function (section, index) {
+        var rect = section.getBoundingClientRect();
+        if (rect.top <= 50 && rect.bottom >= 50) {
+          navLinks.forEach(function (link) {
+            link.classList.remove('active');
+          });
+          navLinks[index].classList.add('active');
+        }
+      });
+    }
+
+    // Actualiza la cuenta atrás cada segundo
+    setInterval(actualizarCuentaAtras, 1000);
+
+    // Llama a la función de actualización al cargar la página
+    window.onload = function() {
+      actualizarCuentaAtras();
+	  // Agrega un event listener para gestionar el scroll
+      window.addEventListener('scroll', function () {
+        sectionSelection();
+      });
+
+      // Llama a sectionSelection() también al cargar la página para establecer el estado inicial
+      sectionSelection();
+	  
+    };
+	
+	
+  </script>
+
+  <footer>
+    <p>Contacto:
+    <br>Arian +34 617 41 52 24
+    <br>Cristina +34 696 53 44 58
+    <br> <span style="font-size: 14px;">(Teléfono o WhatsApp) </span>
+  </footer>
+</body>
+</html>
