@@ -156,9 +156,9 @@
 		max-width:420px
 	}
 	
-	#confirmar > div > div:nth-child(2),
+	
 	#participa > div > div:nth-child(2){
-		max-width:540px
+		max-height:300px;
 	}
 	#confirmar{
 		padding-top: 20px;
