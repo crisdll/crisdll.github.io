@@ -157,6 +157,11 @@
 	#confirmar{
 		padding-top: 70px;
 	}
+
+	#confirmar button{
+		display: block;
+    		margin-left: auto;
+	}
 	
 	#confirmar >img{
 		max-height:500px;
