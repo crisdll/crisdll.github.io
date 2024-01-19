@@ -258,7 +258,7 @@ img {
 	#confirmar img{
 		max-height:800px;
 	}
-	#confirma > div > h4{
+	#confirmar > div > h4{
 	    margin: 70px 130px;
 	}
 	#confirmar >div > div:nth-child(3){
@@ -269,14 +269,9 @@ img {
 
         #confirmar >div > div:nth-child(3) >div {
             width: 33%; /* Establece el ancho de cada imagen en desktop */
-		position: relative;
+	    max-height: 400px;
             overflow: hidden;
         }
-	 #confirmar >div > div:nth-child(3) >div ::before {
-                content: "";
-                display: block;
-                padding-top: 100%; /* 100% del ancho del contenedor, haciendo que sea cuadrado */
-            }
 
 	  /* Estilos para dispositivos móviles */
         @media (max-width: 767px) {
