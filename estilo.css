@@ -9,7 +9,65 @@
       background-color: white;
     }
 	
-	nav {
+	
+  header, footer {
+      text-align: center;
+      z-index: 1000;
+      box-sizing: border-box;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+	  background-color: white;
+	  opacity:0.9;
+	  display:flex;
+	  justify-content: space-between;
+	  align-items: center;
+    }
+
+	footer {
+      bottom: 0;
+      width: 100%;
+	  background-color: var(--bg-overlay-color);
+    }
+	
+	h1{
+		font-family: 'Cormorant Garamond', sans-serif;
+		font-weight: 100;
+	}
+	
+	h2{
+	    font-family: 'Cormorant Garamond', sans-serif;
+	    font-weight: 100;
+	    margin: 0;
+	}
+	
+	h3{
+		font-family: 'Cormorant Garamond', sans-serif;
+		font-weight: 100;
+	}
+	
+	h4{
+		font-family: Montserrat;
+		font-weight: 100;
+	}
+	
+	p{
+		font-family: Montserrat;
+		font-weight: 100;
+	}
+	
+	p a {
+	  color: black;
+      display: inline-block; 
+    }
+	
+	button{
+		background: transparent;
+	 }
+	
+nav {
       float: right;
     }
 	
@@ -18,11 +76,101 @@
 		color: var(--green-medium)
     }
 	
-	img {
+	
+    
+
+    nav a {
+	  color:black;
+      text-decoration: none;
+    }
+
+img {
 		object-fit: cover;
 		width: 100%;
 		height: auto;
 		display: block;
+	}
+
+
+	#inicio > div,
+	#horario > div,
+	#confirmar > div,
+	#viaje > div,
+	#participa > div 	{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+	  
+
+
+    #inicio .texto {
+      text-align: left;
+    }
+
+    #inicio .mensaje {
+      text-align: left;
+    }
+
+    #inicio .cuenta-atras {
+      text-align: left;
+      width: 100%;
+    }
+
+    #inicio .bajo-cuenta {
+      text-align: left;
+      width: 100%;
+    }
+
+    #inicio .imagen {
+      text-align: right;
+      position: relative; /* Añadido para posicionar correctamente el div solapado */
+      overflow: hidden;
+    }
+
+    #solapado {
+	background-color: var(--bg-overlay-color);
+    }
+
+    #horario .timeline {
+	  position: relative;
+	  margin: 0 auto;
+	}
+
+	/* The actual timeline (the vertical ruler) */
+	#horario .timeline::after {
+	  content: '';
+	  position: absolute;
+	  background-color: black;
+	  top: 0;
+	  bottom: 0;
+	}
+
+	/* Container around content */
+	#horario .container {
+	  position: relative;
+	  background-color: inherit;
+	}
+
+	/* The circles on the timeline */
+	#horario .container::after {
+	  content: '';
+	  position: absolute;
+	  background-color: black;
+	  border-radius: 50%;
+	  z-index: 1;
+	}
+
+	#confirmar >div > div:nth-child(3){
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+
+	#participa h2{
+	 text-align: center;
 	}
 	
 	#horario,#viaje{
