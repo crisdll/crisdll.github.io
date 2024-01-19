@@ -159,6 +159,8 @@
 	
 	#participa > div > div:nth-child(2){
 		max-height:300px;
+		margin: 0px -20px;
+		overflow: hidden; 
 	}
 	#confirmar{
 		padding-top: 20px;
