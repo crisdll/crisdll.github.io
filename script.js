@@ -11,8 +11,8 @@
 
       	document.getElementById('dias').innerHTML = dias;
 	document.getElementById('horas').innerHTML = horas;
-	document.getElementById('min').innerHTML = min;
-	document.getElementById('seg').innerHTML = seg;
+	document.getElementById('min').innerHTML = minutos;
+	document.getElementById('seg').innerHTML = segundos;
     }
 	
 	function sectionSelection() {
