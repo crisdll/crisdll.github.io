@@ -101,12 +101,10 @@
     }
 
     #inicio .cuenta-atras {
-      margin-top: 20px;
       width: 100%;
     }
 
     #inicio .bajo-cuenta {
-      margin-top: 10px;
 	  font-size:20px;
     }
 	#inicio .bajo-cuenta >p {
