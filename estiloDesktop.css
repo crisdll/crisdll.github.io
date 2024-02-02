@@ -7,6 +7,7 @@
     header {
 	  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
 	  font-size:15px;
+	height:80px;
     }
 	  header img { 
 		  max-width:60px;
@@ -76,6 +77,14 @@
 	#participa > div 	{
       padding: 0px 70px;
     }
+
+#inicio > div,
+	#horario > div,
+	#viaje > div,
+	#participa > div 	{
+      background:white;
+    }
+
 	  
 #inicio{
 	margin-top: 80px; 
@@ -167,6 +176,8 @@
 	
 	#confirmar >img{
 		max-height:500px;
+		position: fixed;
+		z-index:-1;
 	}
 	#confirmar > div > h4{
 	    margin: 70px 130px;
