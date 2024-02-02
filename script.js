@@ -9,10 +9,10 @@
       var minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
       var segundos = Math.floor((diferencia % (1000 * 60)) / (1000));
 
-      	document.getElementById('dias').innerHTML = dias;
-	document.getElementById('horas').innerHTML = horas;
-	document.getElementById('min').innerHTML = minutos;
-	document.getElementById('seg').innerHTML = segundos;
+      	document.getElementById('dias').firstElementChild.innerHTML = dias;
+	document.getElementById('horas').firstElementChild.innerHTML = horas;
+	document.getElementById('min').firstElementChild.innerHTML = minutos;
+	document.getElementById('seg').firstElementChild.innerHTML = segundos;
     }
 	
 	function sectionSelection() {
