@@ -121,6 +121,10 @@ img {
       justify-content: space-around;
     }
 
+	#inicio .cuenta-atras>div{
+		text-align:center;
+	}
+
     #inicio .bajo-cuenta {
       text-align: left;
       width: 100%;
