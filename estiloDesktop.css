@@ -164,7 +164,7 @@
 	#participa > div > div:nth-child(2){
 		max-width:540px
 	}
-	#confirmar{
+	#confirmar>div{
 		padding-top: 70px;
 	}
 
