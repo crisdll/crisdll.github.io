@@ -131,7 +131,7 @@ img {
     }
 
     #solapado {
-	background-color: var(--bg-overlay-color);
+	background-color: var(--bg-overlay-color)!important;
     }
 
     #horario .timeline {
