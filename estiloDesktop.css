@@ -110,6 +110,7 @@
     #inicio .imagen {
       max-width: 600px;
       max-height: 800px;
+      margin-bottom: -130px;
     }
 
     
@@ -118,6 +119,9 @@
 		max-width: 360px;
     		height: 526px;
 	}
+#solapado {
+		height: 100px;
+    }
 
     #horario .timeline {
 	  max-width: 1200px;
