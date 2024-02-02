@@ -7,9 +7,12 @@
       var dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
       var horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       var minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+      var segundos = Math.floor((diferencia % (1000 * 60)) / (1000));
 
-      document.getElementById('cuentaAtras').innerHTML =
-        dias + 'd ' + horas + 'h ' + minutos + 'm';
+      	document.getElementById('dias').innerHTML = dias;
+	document.getElementById('horas').innerHTML = horas;
+	document.getElementById('min').innerHTML = min;
+	document.getElementById('seg').innerHTML = seg;
     }
 	
 	function sectionSelection() {
