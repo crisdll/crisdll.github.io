@@ -79,13 +79,14 @@
     }
 
 #inicio > div,
-	#participa > div 	{
+#participa > div 	{
       background:white;
     }
 
 	  
-#inicio{
-	margin-top: 80px; 
+#under-header{
+	height: 80px; 
+	background:white;
 }
 
     #inicio .texto {
