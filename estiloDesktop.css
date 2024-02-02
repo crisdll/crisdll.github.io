@@ -180,6 +180,9 @@
 		z-index:-1;
 		bottom:0;
 	}
+	#confirmar>div:nth-child(2){
+		min-height:500px;
+	}
 	#confirmar > div > h4{
 	    margin: 70px 130px;
 	}
