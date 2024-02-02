@@ -80,7 +80,7 @@
 
 #inicio 
 #participa,
-#confirmar>div  	{
+#confirmar>div:first-child   	{
       background:white;
     }
 
