@@ -46,7 +46,7 @@ function scrollImage() {
 		//imagen.style.transformOrigin = 55 + nuevaPosicion + '%';
 	
 		//PARTICIPA
-		nuevaPosicion = 82 + (window.scrollY-position2)/20;
+		nuevaPosicion = 75 + (window.scrollY-position2)/20;
 		if(nuevaPosicion<0) nuevaPosicion = 0;
 	        if (nuevaPosicion > 100) nuevaPosicion = 100;
 		imagen2.style.objectPosition = 'center ' + nuevaPosicion + '%';
