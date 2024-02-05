@@ -91,6 +91,8 @@
       max-width: 500px;
       margin-right: 10px;
     }
+#inicio > div:nth-child(2){
+	flex-wrap:nowrap;
 
     #inicio .mensaje {
       margin-bottom: 20px;
