@@ -138,6 +138,7 @@
 
     #horario .timeline {
 	  max-width: 1200px;
+	    margin-left: 70px;
 	}
 
 	/* The actual timeline (the vertical ruler) */
