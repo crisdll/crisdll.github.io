@@ -166,9 +166,15 @@
 	
 	#participa > div > div:nth-child(2){
 		max-height:300px;
+		width:100%;
 		margin: 0px -20px;
 		overflow: hidden; 
+		position:relative;
 	}
+	#participa > img{
+		position:absolute;
+	}
+		
 	#confirmar{
 		padding-top: 20px;
 	}
