@@ -52,7 +52,7 @@ function scrollImage() {
 		console.log(nuevaPosicion)
 		console.log(window.scrollY)
 		console.log(position2)
-		imagen2.style.objectPosition = 'center' + nuevaPosicion + '%';
+		imagen2.style.objectPosition = 'center ' + nuevaPosicion + '%';
     	});
 }
 
