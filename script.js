@@ -48,11 +48,13 @@ function scrollImage() {
         
 	imagen.style.objectPosition = nuevaPosicion + '%';
 	    //imagen.style.transformOrigin = 55 + nuevaPosicion + '%';
-    });
 
-//PARTICIPA
+	    //PARTICIPA
 	imagen = document.querySelector("#participa img");
 	imagen.style.objectPosition = 'center' + nuevaPosicion + '%';
+    });
+
+
 }
 
     // Actualiza la cuenta atrás cada segundo
