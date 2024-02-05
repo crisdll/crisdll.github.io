@@ -40,7 +40,7 @@ function scrollImage() {
 
         // Selecciona la imagen y actualiza la posición
         const imagen = document.querySelector("#inicio .imagen img");
-        //imagen.style.objectPosition = 55 + nuevaPosicion + '%';
+	imagen.style.objectPosition = 55 + nuevaPosicion + '%';
 	    imagen.style.transformOrigin = 55 + nuevaPosicion + '%';
     });
 }
