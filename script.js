@@ -30,16 +30,22 @@
       });
     }
 function scrollImage() {
+	// Selecciona la imagen y actualiza la posición
+        let imagen = document.querySelector("#inicio .imagen img");
+	// Obtiene el rectángulo delimitador del elemento
+	const position = imagen.getBoundingClientRect().top;
+
+
     window.addEventListener('scroll', function () {
         // Calcula una nueva posición basada en el desplazamiento
-        let nuevaPosicion = 55 + (window.scrollY / 50);
+        let nuevaPosicion = 55 + (window.scrollY-position / 50);
         if (nuevaPosicion > 100) {
             nuevaPosicion = 100;
         }
         console.log(nuevaPosicion);
+	    console.log(position);
 
-        // Selecciona la imagen y actualiza la posición
-        let imagen = document.querySelector("#inicio .imagen img");
+        
 	imagen.style.objectPosition = nuevaPosicion + '%';
 	    //imagen.style.transformOrigin = 55 + nuevaPosicion + '%';
     });
