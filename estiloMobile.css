@@ -166,8 +166,7 @@
 	
 	#participa > div > div:nth-child(2){
 		height:300px;
-		margin: 0px -20px;
-		width:100%;
+		width:calc(100% + 40px);;
 		overflow: hidden; 
 		position:relative;
 	}
