@@ -43,6 +43,7 @@ function scrollImage() {
             nuevaPosicion = 100;
         }
         console.log(nuevaPosicion);
+	    console.log(window.scrollY);
 	    console.log(position);
 
         
