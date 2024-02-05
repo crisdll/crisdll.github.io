@@ -92,7 +92,7 @@
       margin-right: 10px;
     }
 #inicio > div:nth-child(2){
-	flex-wrap:nowrap;
+	flex-wrap:wrap;
 }
     #inicio .mensaje {
       margin-bottom: 20px;
