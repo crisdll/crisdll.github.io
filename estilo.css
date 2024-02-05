@@ -93,7 +93,7 @@ img {
 	}
 
 
-	#inicio > div,	
+	#inicio > div:nth-child(2),	
 	#confirmar > div,
 	#viaje > div,
 	#participa > div 	{
@@ -102,6 +102,11 @@ img {
       justify-content: space-evenly;
       align-items: flex-start;
     }
+	  
+	#inicio > div:first-child{
+		display:flex;
+		flex-direction: column;
+	}
 #horario > div{
 	display: flex;
       flex-wrap: wrap;
