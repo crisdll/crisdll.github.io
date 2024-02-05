@@ -39,6 +39,7 @@ function scrollImage(){
       // Selecciona la imagen y actualiza la posición
       const imagen = document.querySelector("#inicio .imagen img");
       imagen.style.objectPosition = nuevaPosicion + + '%';
+	 }
 }
 
     // Actualiza la cuenta atrás cada segundo
