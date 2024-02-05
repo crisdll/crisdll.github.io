@@ -32,7 +32,7 @@
 function scrollImage() {
     window.addEventListener('scroll', function () {
         // Calcula una nueva posición basada en el desplazamiento
-        let nuevaPosicion = (window.scrollY / 50);
+        let nuevaPosicion = 55 + (window.scrollY / 50);
         if (nuevaPosicion > 100) {
             nuevaPosicion = 100;
         }
@@ -40,8 +40,8 @@ function scrollImage() {
 
         // Selecciona la imagen y actualiza la posición
         const imagen = document.querySelector("#inicio .imagen img");
-	imagen.style.objectPosition = 55 + nuevaPosicion + '%';
-	    imagen.style.transformOrigin = 55 + nuevaPosicion + '%';
+	imagen.style.objectPosition = nuevaPosicion + '%';
+	    //imagen.style.transformOrigin = 55 + nuevaPosicion + '%';
     });
 }
 
