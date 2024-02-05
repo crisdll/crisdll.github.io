@@ -30,27 +30,32 @@
       });
     }
 function scrollImage() {
-	// Selecciona la imagen y actualiza la posición
-        const imagen1 = document.querySelector("#inicio .imagen img");
-	const imagen2 = document.querySelector("#participa img");
-	const position1 = imagen1.getBoundingClientRect().top;
-	const position2 = imagen2.getBoundingClientRect().top;
-	
-    	window.addEventListener('scroll', function () {
-	        // Calcula una nueva posición basada en el desplazamiento
-	        let nuevaPosicion = 70 + (window.scrollY-position1)/50;
-		if(nuevaPosicion<0) nuevaPosicion = 0;
-	        if (nuevaPosicion > 100) nuevaPosicion = 100;
-		
-		imagen1.style.objectPosition = nuevaPosicion + '%';
-		//imagen.style.transformOrigin = 55 + nuevaPosicion + '%';
-	
-		//PARTICIPA
-		nuevaPosicion = 50 + (window.scrollY-position2)/15;
-		if(nuevaPosicion<0) nuevaPosicion = 0;
-	        if (nuevaPosicion > 100) nuevaPosicion = 100;
-		imagen2.style.objectPosition = 'center ' + nuevaPosicion + '%';
-    	});
+    // Selecciona la imagen y actualiza la posición
+    const imagen1 = document.querySelector("#inicio .imagen img");
+    const imagen2 = document.querySelector("#participa img");
+    const position1 = imagen1.getBoundingClientRect().top;
+    const position2 = imagen2.getBoundingClientRect().top;
+
+    // Verifica si es un dispositivo móvil
+    const isMobile = window.innerWidth <= 768; // Ajusta según tus necesidades
+
+    window.addEventListener('scroll', function () {
+        // Calcula una nueva posición basada en el desplazamiento
+
+        // IMAGEN 1
+        let nuevaPosicion1 = 70 + (window.scrollY - position1) / (isMobile ? 1 : 50);
+        if (nuevaPosicion1 < 0) nuevaPosicion1 = 0;
+        if (nuevaPosicion1 > 100) nuevaPosicion1 = 100;
+
+        imagen1.style.objectPosition = nuevaPosicion1 + '%';
+
+        // PARTICIPA
+        let nuevaPosicion2 = 50 + (window.scrollY - position2) / (isMobile ? 1 : 15);
+        if (nuevaPosicion2 < 0) nuevaPosicion2 = 0;
+        if (nuevaPosicion2 > 100) nuevaPosicion2 = 100;
+
+        imagen2.style.objectPosition = 'center ' + nuevaPosicion2 + '%';
+    });
 }
 
 
