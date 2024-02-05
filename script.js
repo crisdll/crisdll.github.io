@@ -29,6 +29,17 @@
         }
       });
     }
+function scrollImage(){
+	 window.addEventListener('scroll', function() {
+      // Calcula una nueva posición basada en el desplazamiento
+      let nuevaPosicion =  (window.scrollY / 2);
+	if(nuevaPosicion >100) nuevaPosicio = 100
+		 console.log(nuevaPosicion)
+
+      // Selecciona la imagen y actualiza la posición
+      const imagen = document.querySelector("#inicio .imagen img");
+      imagen.style.objectPosition = nuevaPosicion + + '%';
+}
 
     // Actualiza la cuenta atrás cada segundo
     setInterval(actualizarCuentaAtras, 1000);
@@ -43,5 +54,7 @@
 
       // Llama a sectionSelection() también al cargar la página para establecer el estado inicial
       sectionSelection();
+
+	    scrollImage();
 	  
     };
