@@ -43,14 +43,14 @@ function scrollImage() {
         // Calcula una nueva posición basada en el desplazamiento
 
         // IMAGEN 1
-        let nuevaPosicion1 = 70 + (window.scrollY - position1) / (isMobile ? 1 : 50);
+        let nuevaPosicion1 = 70 + (window.scrollY - position1) / (isMobile ? 15 : 50);
         if (nuevaPosicion1 < 0) nuevaPosicion1 = 0;
         if (nuevaPosicion1 > 100) nuevaPosicion1 = 100;
 
         imagen1.style.objectPosition = nuevaPosicion1 + '%';
 
         // PARTICIPA
-        let nuevaPosicion2 = 50 + (window.scrollY - position2) / (isMobile ? 1 : 15);
+        let nuevaPosicion2 = 50 + (window.scrollY - position2) / (isMobile ? 15 : 50);
         if (nuevaPosicion2 < 0) nuevaPosicion2 = 0;
         if (nuevaPosicion2 > 100) nuevaPosicion2 = 100;
 
