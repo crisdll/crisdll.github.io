@@ -32,7 +32,7 @@
 function scrollImage() {
 	// Selecciona la imagen y actualiza la posición
         const imagen1 = document.querySelector("#inicio .imagen img");
-	const imagen2 = document.querySelector("#participa .imagen img");
+	const imagen2 = document.querySelector("#participa img");
 	const position1 = imagen1.getBoundingClientRect().top;
 	const position2 = imagen2.getBoundingClientRect().top;
 	
