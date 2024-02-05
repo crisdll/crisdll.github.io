@@ -31,14 +31,16 @@
     }
 function scrollImage() {
 	// Selecciona la imagen y actualiza la posición
-        let imagen = document.querySelector("#inicio .imagen img");
-	// Obtiene el rectángulo delimitador del elemento
-	const position = imagen.getBoundingClientRect().top;
-
+        const imagen1 = document.querySelector("#inicio .imagen img");
+		const imagen2 = document.querySelector("#participa .imagen img");
+	
 
     window.addEventListener('scroll', function () {
+	// Obtiene el rectángulo delimitador del elemento
+	const position = imagen1.getBoundingClientRect().top;
         // Calcula una nueva posición basada en el desplazamiento
         let nuevaPosicion = 55 + (window.scrollY-position / 50);
+		
         if (nuevaPosicion > 100) {
             nuevaPosicion = 100;
         }
@@ -47,16 +49,15 @@ function scrollImage() {
 	    console.log(position);
 
         
-	imagen.style.objectPosition = nuevaPosicion + '%';
-	    //imagen.style.transformOrigin = 55 + nuevaPosicion + '%';
+	imagen1.style.objectPosition = nuevaPosicion + '%';
+	//imagen.style.transformOrigin = 55 + nuevaPosicion + '%';
 
-	    //PARTICIPA
-	imagen = document.querySelector("#participa img");
-	imagen.style.objectPosition = 'center' + nuevaPosicion + '%';
+	//PARTICIPA
+	imagen2.style.objectPosition = 'center' + nuevaPosicion + '%';
     });
 
-
 }
+
 
     // Actualiza la cuenta atrás cada segundo
     setInterval(actualizarCuentaAtras, 1000);
