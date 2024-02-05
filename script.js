@@ -33,8 +33,8 @@ function scrollImage(){
 	 window.addEventListener('scroll', function() {
       // Calcula una nueva posición basada en el desplazamiento
       let nuevaPosicion =  (window.scrollY / 2);
-	if(nuevaPosicion >100) nuevaPosicio = 100
-		 console.log(nuevaPosicion)
+	if(nuevaPosicion >100) {nuevaPosicio = 100}
+		 console.log(nuevaPosicion);
 
       // Selecciona la imagen y actualiza la posición
       const imagen = document.querySelector("#inicio .imagen img");
