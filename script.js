@@ -46,7 +46,7 @@ function scrollImage() {
 		//imagen.style.transformOrigin = 55 + nuevaPosicion + '%';
 	
 		//PARTICIPA
-		nuevaPosicion = 70 + (window.scrollY-position2)/50;
+		nuevaPosicion = 100 + (window.scrollY-position2)/20;
 		if(nuevaPosicion<0) nuevaPosicion = 0;
 	        if (nuevaPosicion > 100) nuevaPosicion = 100;
 		console.log(nuevaPosicion)
