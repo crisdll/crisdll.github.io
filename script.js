@@ -43,7 +43,7 @@ function scrollImage() {
         // Calcula una nueva posición basada en el desplazamiento
 
         // IMAGEN 1
-        let nuevaPosicion1 = 70 + (window.scrollY - position1) / (isMobile ? 15 : 50);
+        let nuevaPosicion1 = 70 + (window.scrollY - position1) / (isMobile ? 5 : 50);
         if (nuevaPosicion1 < 0) nuevaPosicion1 = 0;
         if (nuevaPosicion1 > 100) nuevaPosicion1 = 100;
 
