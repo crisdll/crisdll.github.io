@@ -32,30 +32,28 @@
 function scrollImage() {
 	// Selecciona la imagen y actualiza la posición
         const imagen1 = document.querySelector("#inicio .imagen img");
-		const imagen2 = document.querySelector("#participa .imagen img");
+	const imagen2 = document.querySelector("#participa .imagen img");
 	const position1 = imagen1.getBoundingClientRect().top;
 	const position2 = imagen2.getBoundingClientRect().top;
 	
 
-    window.addEventListener('scroll', function () {
+    	window.addEventListener('scroll', function () {
 
-        // Calcula una nueva posición basada en el desplazamiento
-        let nuevaPosicion = 50 + (window.scrollY-position1);
+	        // Calcula una nueva posición basada en el desplazamiento
+	        let nuevaPosicion = 50 + (window.scrollY-position1);
 		if(nuevaPosicion<0) nuevaPosicion = 0;
-        if (nuevaPosicion > 100) nuevaPosicion = 100;
+	        if (nuevaPosicion > 100) nuevaPosicion = 100;
        
 		console.log(nuevaPosicion);
-	    console.log(window.scrollY);
-	    console.log(position1);
+	    	console.log(window.scrollY);
+		console.log(position1);
 
-        
-	imagen1.style.objectPosition = nuevaPosicion + '%';
-	//imagen.style.transformOrigin = 55 + nuevaPosicion + '%';
-
-	//PARTICIPA
-	//imagen2.style.objectPosition = 'center' + nuevaPosicion + '%';
-    });
-
+		imagen1.style.objectPosition = nuevaPosicion + '%';
+		//imagen.style.transformOrigin = 55 + nuevaPosicion + '%';
+	
+		//PARTICIPA
+		//imagen2.style.objectPosition = 'center' + nuevaPosicion + '%';
+    	});
 }
 
 
