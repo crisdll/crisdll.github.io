@@ -89,11 +89,11 @@
 }
 
     #inicio .texto {
-      max-width: 500px;
+      width: 100%;
       margin-right: 10px;
     }
 #inicio > div:nth-child(2){
-	flex-wrap:wrap;
+	flex-direction: column;
 }
     #inicio .mensaje {
       margin-bottom: 20px;
@@ -160,7 +160,7 @@
 	
 	#confirmar > div > div:nth-child(1),
 	#participa > div > div:nth-child(1){
-		max-width:420px
+		width:100%
 	}
 	
 	
