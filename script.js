@@ -71,12 +71,12 @@ window.onload = function () {
     // Actualiza la cuenta atrás cada segundo
     setInterval(actualizarCuentaAtras, 1000);
     // Llama a sectionSelection() también al cargar la página para establecer el estado inicial
-    sectionSelection();
+    //sectionSelection();
     scrollImage();
     
     // Agrega un event listener para gestionar el scroll
     window.addEventListener('scroll', function () {
-        sectionSelection();
+        //sectionSelection();
         scrollImage();
     });
 };
