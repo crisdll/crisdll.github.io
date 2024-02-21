@@ -77,4 +77,4 @@ window.addEventListener('load', function () {
         sectionSelection();
         scrollImage();
     });
-)};
+});
