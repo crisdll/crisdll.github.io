@@ -40,7 +40,7 @@ function scrollImage() {
      const imagen1 = document.querySelector("#inicio .imagen img");
     const imagen2 = document.querySelector("#participa img");
      const rectImagen1 = imagen1.getBoundingClientRect();
-    const position2 = imagen2.getBoundingClientRect().top;
+    const rectImagen2 = imagen1.getBoundingClientRect();
     const headerHeight = document.querySelector("header").getBoundingClientRect().height;
     const screenHeight = window.innerHeight;
 
@@ -49,20 +49,9 @@ function scrollImage() {
 
 
     // Calcula una nueva posición basada en el desplazamiento
-    console.log(1)
-    console.log(screenHeight > rectImagen1.top)
-    console.log(2)
-    console.log(headerHeight < rectImagen1.bottom)
-    console.log(screenHeight)
-    console.log(rectImagen1.top)
-    console.log(rectImagen1.bottom)
-    console.log(headerHeight)
-
     // IMAGEN 1
     if(screenHeight > rectImagen1.top  && headerHeight < rectImagen1.bottom){
         let nuevaPosicion1 = (1-((rectImagen1.top+rectImagen1.height-headerHeight)/(screenHeight+rectImagen1.height-headerHeight)))*100
-          console.log(nuevaPosicion1)
-    
         imagen1.style.objectPosition = nuevaPosicion1 + '%';
     }
 
@@ -73,13 +62,10 @@ function scrollImage() {
 
     //imagen1.style.objectPosition = nuevaPosicion1 + '%';
 
-    // PARTICIPA
-    let nuevaPosicion2 = 50 + (window.scrollY - position2) / (isMobile ? 15 : 50);
-    if (nuevaPosicion2 < 0) nuevaPosicion2 = 0;
-    if (nuevaPosicion2 > 100) nuevaPosicion2 = 100;
-
-    imagen2.style.objectPosition = 'center ' + nuevaPosicion2 + '%';
-
+    if(screenHeight > rectImagen2.top  && headerHeight < rectImagen2.bottom){
+        let nuevaPosicion2 = (1-((rectImagen2.top+rectImagen2.height-headerHeight)/(screenHeight+rectImagen2.height-headerHeight)))*100
+        imagen2.style.objectPosition = 'center ' + nuevaPosicion2 + '%';
+    }
 }
 
 
