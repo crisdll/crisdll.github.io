@@ -62,12 +62,10 @@ function scrollImage() {
 
 
 
-
-
 // Llama a la función de actualización al cargar la página
 window.onload = function () {
+    location.href = location.href;
     actualizarCuentaAtras();
-    window.scrollTo(0, 0);
     // Actualiza la cuenta atrás cada segundo
     setInterval(actualizarCuentaAtras, 1000);
     // Llama a sectionSelection() también al cargar la página para establecer el estado inicial
