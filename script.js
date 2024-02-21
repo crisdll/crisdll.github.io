@@ -63,7 +63,7 @@ function scrollImage() {
           
      }else{
           // IMAGEN 1
-         let nuevaPosicion1 = 70 + (window.scrollY - position1) / 50;
+         let nuevaPosicion1 = 70 + (window.scrollY - rectImagen2.top) / 50;
          if (nuevaPosicion1 < 0) nuevaPosicion1 = 0;
          if (nuevaPosicion1 > 100) nuevaPosicion1 = 100;
          imagen1.style.objectPosition = nuevaPosicion1 + '%';
