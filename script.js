@@ -59,7 +59,7 @@ function scrollImage() {
     console.log(headerHeight)
 
     // IMAGEN 1
-    if(screenHeight > rectImagen1.top  && headerHeight < rectImagen1.bottom)){
+    if(screenHeight > rectImagen1.top  && headerHeight < rectImagen1.bottom){
         let nuevaPosicion1 = (1-((rectImagen1.top+rectImagen1.height-headerHeight)/(screenHeight+rectImagen1.height-headerHeight)))*100
           console.log(nuevaPosicion1)
     
