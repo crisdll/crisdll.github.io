@@ -1,3 +1,8 @@
+if (performance.navigation.type === 1) {
+     // La página se ha cargado mediante recarga o navegación
+    window.location.href = "https://crisdll.github.io"; // Recarga la página
+}
+
 // Calcula la cuenta atrás
 function actualizarCuentaAtras() {
     var fechaEvento = new Date('2025-05-10T12:00:00'); // Fecha y hora del evento
@@ -63,11 +68,7 @@ function scrollImage() {
 
 
 // Llama a la función de actualización al cargar la página
-window.onload = function () {
-    if (performance.navigation.type === 1) {
-        // La página se ha cargado mediante recarga o navegación
-        window.location.href = "https://crisdll.github.io"; // Recarga la página
-    }
+window.onload = function () { 
     actualizarCuentaAtras();
     // Actualiza la cuenta atrás cada segundo
     setInterval(actualizarCuentaAtras, 1000);
