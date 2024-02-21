@@ -37,24 +37,42 @@ function sectionSelection() {
 
 
 function scrollImage() {
-    // Selecciona la imagen y actualiza la posición
-    const imagen1 = document.querySelector("#inicio .imagen img");
+       const imagen1 = document.querySelector("#inicio .imagen img");
     const imagen2 = document.querySelector("#participa img");
     const position1 = imagen1.getBoundingClientRect().top;
     const position2 = imagen2.getBoundingClientRect().top;
+    const headerHeight = document.querySelector("header").getBoundingClientRect().height;
+    const screenHeight = window.innerHeight;
 
     // Verifica si es un dispositivo móvil
     const isMobile = window.innerWidth <= 768; // Ajusta según tus necesidades
 
 
     // Calcula una nueva posición basada en el desplazamiento
+    console.log(1)
+    console.log(screenHeight > imagen1.getBoundingClientRect().top)
+    console.log(2)
+    console.log(headerHeight < imagen1.getBoundingClientRect().bottom)
+    console.log(screenHeight)
+    console.log(imagen1.getBoundingClientRect().top)
+    console.log(imagen1.getBoundingClientRect().bottom)
+    console.log(headerHeight)
 
     // IMAGEN 1
-    let nuevaPosicion1 = 70 + (window.scrollY - position1) / (isMobile ? 5 : 50);
-    if (nuevaPosicion1 < 0) nuevaPosicion1 = 0;
-    if (nuevaPosicion1 > 100) nuevaPosicion1 = 100;
+    if(screenHeight > imagen1.getBoundingClientRect().top  && headerHeight < imagen1.getBoundingClientRect().bottom)){
+        let nuevaPosicion1 = window.scrollY  * (isMobile ? 0.125 : 50);
+        if (nuevaPosicion1 < 0) nuevaPosicion1 = 0;
+        if (nuevaPosicion1 > 100) nuevaPosicion1 = 100;
+    
+        imagen1.style.objectPosition = nuevaPosicion1 + '%';
+    }
 
-    imagen1.style.objectPosition = nuevaPosicion1 + '%';
+    // IMAGEN 1
+    //let nuevaPosicion1 = 70 + (window.scrollY - position1) / (isMobile ? 5 : 50);
+    //if (nuevaPosicion1 < 0) nuevaPosicion1 = 0;
+    //if (nuevaPosicion1 > 100) nuevaPosicion1 = 100;
+
+    //imagen1.style.objectPosition = nuevaPosicion1 + '%';
 
     // PARTICIPA
     let nuevaPosicion2 = 50 + (window.scrollY - position2) / (isMobile ? 15 : 50);
