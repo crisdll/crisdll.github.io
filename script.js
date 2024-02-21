@@ -47,25 +47,33 @@ function scrollImage() {
     // Verifica si es un dispositivo móvil
     const isMobile = window.innerWidth <= 768; // Ajusta según tus necesidades
 
+     // Calcula una nueva posición basada en el desplazamiento
+     if(isMobil){
+          // IMAGEN 1
+         if(screenHeight > rectImagen1.top  && headerHeight < rectImagen1.bottom){
+             let nuevaPosicion1 = (1-((rectImagen1.top+rectImagen1.height-headerHeight)/(screenHeight+rectImagen1.height-headerHeight)))*100
+             imagen1.style.objectPosition = nuevaPosicion1 + '%';
+         }
 
-    // Calcula una nueva posición basada en el desplazamiento
-    // IMAGEN 1
-    if(screenHeight > rectImagen1.top  && headerHeight < rectImagen1.bottom){
-        let nuevaPosicion1 = (1-((rectImagen1.top+rectImagen1.height-headerHeight)/(screenHeight+rectImagen1.height-headerHeight)))*100
-        imagen1.style.objectPosition = nuevaPosicion1 + '%';
-    }
+          //IMAGEN 2
+          if(screenHeight > rectImagen2.top  && headerHeight < rectImagen2.bottom){
+             let nuevaPosicion2 = (1-((rectImagen2.top+rectImagen2.height-headerHeight)/(screenHeight+rectImagen2.height-headerHeight)))*100
+             imagen2.style.objectPosition = 'center ' + nuevaPosicion2 + '%';
+         }
+          
+     }else{
+          // IMAGEN 1
+         let nuevaPosicion1 = 70 + (window.scrollY - position1) / 50;
+         if (nuevaPosicion1 < 0) nuevaPosicion1 = 0;
+         if (nuevaPosicion1 > 100) nuevaPosicion1 = 100;
+         imagen1.style.objectPosition = nuevaPosicion1 + '%';
+     }
+    
+    
 
-    // IMAGEN 1
-    //let nuevaPosicion1 = 70 + (window.scrollY - position1) / (isMobile ? 5 : 50);
-    //if (nuevaPosicion1 < 0) nuevaPosicion1 = 0;
-    //if (nuevaPosicion1 > 100) nuevaPosicion1 = 100;
+    
 
-    //imagen1.style.objectPosition = nuevaPosicion1 + '%';
-
-    if(screenHeight > rectImagen2.top  && headerHeight < rectImagen2.bottom){
-        let nuevaPosicion2 = (1-((rectImagen2.top+rectImagen2.height-headerHeight)/(screenHeight+rectImagen2.height-headerHeight)))*100
-        imagen2.style.objectPosition = 'center ' + nuevaPosicion2 + '%';
-    }
+    
 }
 
 
