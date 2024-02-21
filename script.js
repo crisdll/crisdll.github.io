@@ -48,7 +48,7 @@ function scrollImage() {
     const isMobile = window.innerWidth <= 768; // Ajusta según tus necesidades
 
      // Calcula una nueva posición basada en el desplazamiento
-     if(isMobil){
+     if(isMobile){
           // IMAGEN 1
          if(screenHeight > rectImagen1.top  && headerHeight < rectImagen1.bottom){
              let nuevaPosicion1 = (1-((rectImagen1.top+rectImagen1.height-headerHeight)/(screenHeight+rectImagen1.height-headerHeight)))*100
