@@ -37,9 +37,9 @@ function sectionSelection() {
 
 
 function scrollImage() {
-       const imagen1 = document.querySelector("#inicio .imagen img");
+     const imagen1 = document.querySelector("#inicio .imagen img");
     const imagen2 = document.querySelector("#participa img");
-    const position1 = imagen1.getBoundingClientRect().top;
+     const rectImagen1 = imagec1.getBoundingClientRect();
     const position2 = imagen2.getBoundingClientRect().top;
     const headerHeight = document.querySelector("header").getBoundingClientRect().height;
     const screenHeight = window.innerHeight;
@@ -50,19 +50,18 @@ function scrollImage() {
 
     // Calcula una nueva posición basada en el desplazamiento
     console.log(1)
-    console.log(screenHeight > imagen1.getBoundingClientRect().top)
+    console.log(screenHeight > rectImagen1.top)
     console.log(2)
-    console.log(headerHeight < imagen1.getBoundingClientRect().bottom)
+    console.log(headerHeight < rectImagen1bottom)
     console.log(screenHeight)
-    console.log(imagen1.getBoundingClientRect().top)
-    console.log(imagen1.getBoundingClientRect().bottom)
+    console.log(rectImagen1.top)
+    console.log(rectImagen1.bottom)
     console.log(headerHeight)
 
     // IMAGEN 1
-    if(screenHeight > imagen1.getBoundingClientRect().top  && headerHeight < imagen1.getBoundingClientRect().bottom)){
-        let nuevaPosicion1 = window.scrollY  * (isMobile ? 0.125 : 50);
-        if (nuevaPosicion1 < 0) nuevaPosicion1 = 0;
-        if (nuevaPosicion1 > 100) nuevaPosicion1 = 100;
+    if(screenHeight > rectImagen1.top  && headerHeight < rectImagen1.bottom)){
+        let nuevaPosicion1 = (1-((rectImagen1.top+rectImagen1.height-headerHeight)/(screenHeight+rectImagen1.height-headerHeight)))*100
+          console.log(nuevaPosicion1)
     
         imagen1.style.objectPosition = nuevaPosicion1 + '%';
     }
