@@ -64,7 +64,7 @@ function scrollImage() {
 
 // Llama a la función de actualización al cargar la página
 window.addEventListener('load', function () {
-    location.href = location.href;
+    window.location.href
     actualizarCuentaAtras();
     // Actualiza la cuenta atrás cada segundo
     setInterval(actualizarCuentaAtras, 1000);
