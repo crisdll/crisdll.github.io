@@ -39,7 +39,7 @@ function sectionSelection() {
 function scrollImage() {
      const imagen1 = document.querySelector("#inicio .imagen img");
     const imagen2 = document.querySelector("#participa img");
-     const rectImagen1 = imagec1.getBoundingClientRect();
+     const rectImagen1 = image1.getBoundingClientRect();
     const position2 = imagen2.getBoundingClientRect().top;
     const headerHeight = document.querySelector("header").getBoundingClientRect().height;
     const screenHeight = window.innerHeight;
