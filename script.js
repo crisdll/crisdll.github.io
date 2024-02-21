@@ -62,23 +62,21 @@ function scrollImage() {
 
 
 
-window.scrollTo(0, 0);
-// Actualiza la cuenta atrás cada segundo
-setInterval(actualizarCuentaAtras, 1000);
+
 
 // Llama a la función de actualización al cargar la página
 window.onload = function () {
-    
     actualizarCuentaAtras();
+    window.scrollTo(0, 0);
+    // Actualiza la cuenta atrás cada segundo
+    setInterval(actualizarCuentaAtras, 1000);
+    // Llama a sectionSelection() también al cargar la página para establecer el estado inicial
+    sectionSelection();
+    scrollImage();
+    
     // Agrega un event listener para gestionar el scroll
     window.addEventListener('scroll', function () {
         sectionSelection();
+        scrollImage();
     });
-
-    // Llama a sectionSelection() también al cargar la página para establecer el estado inicial
-    sectionSelection();
-
-    scrollImage();
-    window.addEventListener('scroll', function () { scrollImage() });
-
 };
