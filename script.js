@@ -63,7 +63,7 @@ function scrollImage() {
 
 
 // Llama a la función de actualización al cargar la página
-window.onload = function () {
+window.addEventListener('load', function () {
     location.href = location.href;
     actualizarCuentaAtras();
     // Actualiza la cuenta atrás cada segundo
@@ -77,4 +77,4 @@ window.onload = function () {
         sectionSelection();
         scrollImage();
     });
-};
+)};
