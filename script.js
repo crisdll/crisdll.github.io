@@ -1,5 +1,5 @@
 if (performance.navigation.type === 1) {
-     // La página se ha cargado mediante recarga o navegación
+    // La página se ha cargado mediante recarga o navegación
     window.location.href = "https://crisdll.github.io"; // Recarga la página
 }
 
@@ -37,56 +37,64 @@ function sectionSelection() {
 
 
 function scrollImage() {
-     const imagen1 = document.querySelector("#inicio .imagen img");
+    const imagen1 = document.querySelector("#inicio .imagen img");
     const imagen2 = document.querySelector("#participa img");
-     const rectImagen1 = imagen1.getBoundingClientRect();
+    const imagen3 = document.querySelector("#confirmar img");
+    const rectImagen1 = imagen1.getBoundingClientRect();
     const rectImagen2 = imagen2.getBoundingClientRect();
+    const rectImagen3 = imagen2.getBoundingClientRect();
     const headerHeight = document.querySelector("header").getBoundingClientRect().height;
     const screenHeight = window.innerHeight;
 
     // Verifica si es un dispositivo móvil
     const isMobile = window.innerWidth <= 768; // Ajusta según tus necesidades
 
-     // Calcula una nueva posición basada en el desplazamiento
-     if(isMobile){
-          // IMAGEN 1
-         if(screenHeight > rectImagen1.top  && headerHeight < rectImagen1.bottom){
-             let nuevaPosicion1 = (1-((rectImagen1.top+rectImagen1.height-headerHeight)/(screenHeight+rectImagen1.height-headerHeight)))*100
-             imagen1.style.objectPosition = nuevaPosicion1 + '%';
-         }
+    // Calcula una nueva posición basada en el desplazamiento
+    if (isMobile) {
+        // IMAGEN 1
+        if (screenHeight > rectImagen1.top && headerHeight < rectImagen1.bottom) {
+            let nuevaPosicion1 = (1 - ((rectImagen1.top + rectImagen1.height - headerHeight) / (screenHeight + rectImagen1.height - headerHeight))) * 100
+            imagen1.style.objectPosition = nuevaPosicion1 + '%';
+        }
 
-          //IMAGEN 2
-          if(screenHeight > rectImagen2.top  && headerHeight < rectImagen2.bottom){
-             let nuevaPosicion2 = (1-((rectImagen2.top+rectImagen2.height-headerHeight)/(screenHeight+rectImagen2.height-headerHeight)))*100
-             imagen2.style.objectPosition = 'center ' + nuevaPosicion2 + '%';
-         }
-          
-     }else{
-          // IMAGEN 1
-         let nuevaPosicion1 = 70 + (window.scrollY - rectImagen2.top) / 50;
-         if (nuevaPosicion1 < 0) nuevaPosicion1 = 0;
-         if (nuevaPosicion1 > 100) nuevaPosicion1 = 100;
-         imagen1.style.objectPosition = nuevaPosicion1 + '%';
-     }
-    
-    
+        //IMAGEN 2
+        if (screenHeight > rectImagen2.top && headerHeight < rectImagen2.bottom) {
+            let nuevaPosicion2 = (1 - ((rectImagen2.top + rectImagen2.height - headerHeight) / (screenHeight + rectImagen2.height - headerHeight))) * 100
+            imagen2.style.objectPosition = 'center ' + nuevaPosicion2 + '%';
+        }
 
-    
+        //IMAGEN 3
+        if (screenHeight > rectImagen3.top && headerHeight < rectImagen3.bottom) {
+            let nuevaPosicion3 = (1 - ((rectImagen3.top + rectImagen3.height - headerHeight) / (screenHeight + rectImagen3.height - headerHeight))) * 100
+            imagen3.style.objectPosition = 'center ' + nuevaPosicion3 + '%';
+        }
 
-    
+    } else {
+        // IMAGEN 1
+        let nuevaPosicion1 = 70 + (window.scrollY - rectImagen2.top) / 50;
+        if (nuevaPosicion1 < 0) nuevaPosicion1 = 0;
+        if (nuevaPosicion1 > 100) nuevaPosicion1 = 100;
+        imagen1.style.objectPosition = nuevaPosicion1 + '%';
+    }
+
+
+
+
+
+
 }
 
 
 
 // Llama a la función de actualización al cargar la página
-window.onload = function () { 
+window.onload = function () {
     actualizarCuentaAtras();
     // Actualiza la cuenta atrás cada segundo
     setInterval(actualizarCuentaAtras, 1000);
     // Llama a sectionSelection() también al cargar la página para establecer el estado inicial
     sectionSelection();
     scrollImage();
-    
+
     // Agrega un event listener para gestionar el scroll
     window.addEventListener('scroll', function () {
         sectionSelection();
