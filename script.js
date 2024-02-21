@@ -52,7 +52,7 @@ function scrollImage() {
     console.log(1)
     console.log(screenHeight > rectImagen1.top)
     console.log(2)
-    console.log(headerHeight < rectImagen1bottom)
+    console.log(headerHeight < rectImagen1.bottom)
     console.log(screenHeight)
     console.log(rectImagen1.top)
     console.log(rectImagen1.bottom)
