@@ -40,7 +40,7 @@ function scrollImage() {
      const imagen1 = document.querySelector("#inicio .imagen img");
     const imagen2 = document.querySelector("#participa img");
      const rectImagen1 = imagen1.getBoundingClientRect();
-    const rectImagen2 = imagen1.getBoundingClientRect();
+    const rectImagen2 = imagen2.getBoundingClientRect();
     const headerHeight = document.querySelector("header").getBoundingClientRect().height;
     const screenHeight = window.innerHeight;
 
