@@ -48,7 +48,7 @@ function scrollImage() {
     const rectImagen2 = imagen2.getBoundingClientRect();
     const rectImagen3 = imagen3.getBoundingClientRect();
     const headerHeight = document.querySelector("header").getBoundingClientRect().height;
-    let pixels = 50;
+    let pixels = 25;
     
 
     // Verifica si es un dispositivo móvil
@@ -56,7 +56,7 @@ function scrollImage() {
 
     // Calcula una nueva posición basada en el desplazamiento
     if (isMobile) {
-        //pixels = 25
+        //pixels = 8
         // IMAGEN 1
         if (screenHeight > rectImagen1.top && headerHeight < rectImagen1.bottom) {
             let nuevaPosicion1 = (1 - ((rectImagen1.top + rectImagen1.height - headerHeight) / (screenHeight + rectImagen1.height - headerHeight))) * 100
