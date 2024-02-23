@@ -135,6 +135,7 @@ img {
       width: 100%;
 	display:flex;
       justify-content: space-around;
+	transition: opacity 1s linear;
     }
 
 	#inicio .cuenta-atras>div{
@@ -155,6 +156,10 @@ img {
     #solapado {
 	background-color: var(--bg-overlay-color)!important;
     }
+
+#horario img{
+	transition: opacity 1s linear;
+}
 
     #horario .timeline {
 	  position: relative;
@@ -197,6 +202,7 @@ img {
 
 	#participa h2{
 	 text-align: center;
+	transition: opacity 1s linear;
 	}
 	
 	#horario,#viaje{
