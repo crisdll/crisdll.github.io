@@ -85,7 +85,7 @@ function scrollImage() {
     Array.from(document.querySelector('.timeline').children).forEach(function(child){
         console.log(child)
         const rect = child.getBoundingClientRect()
-        if(screenHeight > rectImagen1.top && headerHeight < rectImagen1.bottom){
+        if(screenHeight > rect.top && headerHeight < rect.bottom){
             child.style.opacity=1
         }else{
             child.style.opacity=0
