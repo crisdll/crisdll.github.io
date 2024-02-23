@@ -169,14 +169,14 @@ img {
 	  top: 0;
 	  bottom: 0;
 	  height: var(--timeline-after-height);
-	  transition: height 3s ease-in-out;
+	  transition: height 2s ease-in-out;
 	}
 
 	/* Container around content */
 	#horario .container {
 	  position: relative;
 	  background-color: inherit;
-	  transition: opacity 3s ease-in-out;
+	  transition: opacity 2s ease-in-out;
 	}
 
 	/* The circles on the timeline */
