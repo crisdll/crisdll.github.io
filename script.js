@@ -7,7 +7,15 @@ if (performance.navigation.type === 1) {
 
 function toggleNav() {
         var nav = document.querySelector('nav');
-        nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        var body = document.body;
+
+        if (nav.style.display === 'flex') {
+            nav.style.display = 'none';
+            body.style.overflow = 'auto'; // Re-enable scrolling
+        } else {
+            nav.style.display = 'flex';
+            body.style.overflow = 'hidden'; // Disable scrolling
+        }
 }
 
 // Calcula la cuenta atrás
