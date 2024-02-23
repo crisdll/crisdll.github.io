@@ -135,7 +135,7 @@ img {
       width: 100%;
 	display:flex;
       justify-content: space-around;
-	transition: opacity 1s linear;
+	transition: opacity 2s linear;
     }
 
 	#inicio .cuenta-atras>div{
@@ -202,7 +202,7 @@ img {
 
 	#participa h2{
 	 text-align: center;
-	transition: opacity 1s linear;
+	transition: opacity 2s linear;
 	}
 	
 	#horario,#viaje{
