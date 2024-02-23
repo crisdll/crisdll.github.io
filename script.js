@@ -90,6 +90,11 @@ function scrollImage() {
             child.style.opacity=0
         }
     })  
+    //Horario line
+    const max_height = document.querySelector('.timeline').getBoundingClientRect().height;
+    let t_height = screenHeight-document.querySelector('.timeline .container').getBoundingClientRect().top-50
+    if(t_height> max_height) t_height = max_height;
+    document.querySelector('.timeline').style.setProperty('--timeline-after-height', t_height+"px");
 }
 
 
