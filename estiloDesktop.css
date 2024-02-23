@@ -1,4 +1,11 @@
 @media (min-width: 767px) {
+nav {
+        display: block;
+    }
+
+    .burger-icon {
+        display: none;
+    }
 
     header, footer {
       padding: 10px 60px;
