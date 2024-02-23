@@ -1,4 +1,5 @@
 const screenHeight = window.innerHeight;
+const isMobile = window.innerWidth <= 768; // Verifica si es un dispositivo móvil
 
 if (performance.navigation.type === 1) {
     // La página se ha cargado mediante recarga o navegación
@@ -6,6 +7,7 @@ if (performance.navigation.type === 1) {
 }
 
 function toggleNav() {
+    if(isMobile){
         var nav = document.querySelector('nav');
         var body = document.body;
 
@@ -16,6 +18,7 @@ function toggleNav() {
             nav.style.display = 'flex';
             body.style.overflow = 'hidden'; // Disable scrolling
         }
+    }
 }
 
 // Calcula la cuenta atrás
@@ -66,9 +69,6 @@ function scrollImage() {
     //Imagenes
     const imagen1 = document.querySelector("#inicio .imagen img");  
     const rectImagen1 = imagen1.getBoundingClientRect(); 
-
-    // Verifica si es un dispositivo móvil
-    const isMobile = window.innerWidth <= 768; // Ajusta según tus necesidades
 
     // Calcula una nueva posición basada en el desplazamiento
     if (isMobile) {
