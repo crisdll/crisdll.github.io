@@ -174,6 +174,7 @@ img {
 	#horario .container {
 	  position: relative;
 	  background-color: inherit;
+	  transition: object-position 1s ease-in-out;
 	}
 
 	/* The circles on the timeline */
