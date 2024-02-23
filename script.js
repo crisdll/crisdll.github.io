@@ -37,6 +37,15 @@ function sectionSelection() {
     });
 }
 
+function appear(element,headerHeight){
+    const rect = element.getBoundingClientRect()
+        if(screenHeight > element.top && headerHeight < rect.bottom){
+            child.style.opacity=1
+        }else{
+            child.style.opacity=0
+        }
+}
+
 
 function scrollImage() {
 
@@ -85,12 +94,7 @@ function scrollImage() {
 
     //Horario
     Array.from(document.querySelector('.timeline').children).forEach(function(child){
-        const rect = child.getBoundingClientRect()
-        if(screenHeight > rect.top && headerHeight < rect.bottom){
-            child.style.opacity=1
-        }else{
-            child.style.opacity=0
-        }
+        appear(child,headerHeight)
     })  
     //Horario line
     const max_height = document.querySelector('.timeline').getBoundingClientRect().height - pixels;
@@ -98,6 +102,12 @@ function scrollImage() {
     if(t_height> max_height) t_height = max_height ;
     if(t_height < 0) t_height = 0;
     document.querySelector('.timeline').style.setProperty('--timeline-after-height', t_height+"px");
+    //cuenta atras
+    appear(document.querySelector('.cuenta-atras'),headerHeight)
+    //imagen1
+    appear(document.querySelector('#horario img'),headerHeight)
+    //text
+    appear(document.querySelector('#participa h2'),headerHeight)
 }
 
 
