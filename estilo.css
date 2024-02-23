@@ -1,4 +1,4 @@
-	:root {
+:root {
 		--bg-overlay-color: #cadcd2;
 		--green-medium: rgb(84, 130, 111);
 	}
@@ -92,6 +92,10 @@ img {
 		display: block;
 		transition: object-position 1s linear;
 	}
+
+section {
+    scroll-margin-top: 80px;
+}
 
 
 	#confirmar > div,
