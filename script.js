@@ -5,6 +5,11 @@ if (performance.navigation.type === 1) {
     window.location.href = "https://crisdll.github.io"; // Recarga la página
 }
 
+function toggleNav() {
+        var nav = document.querySelector('nav');
+        nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+}
+
 // Calcula la cuenta atrás
 function actualizarCuentaAtras() {
     var fechaEvento = new Date('2025-05-10T12:00:00'); // Fecha y hora del evento
