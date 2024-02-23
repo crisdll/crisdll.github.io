@@ -48,23 +48,21 @@ function appear(element,headerHeight){
 
 
 function scrollImage() {
-
-    //Imagenes
-    const imagen1 = document.querySelector("#inicio .imagen img");
-    const imagen2 = document.querySelector("#participa img");
-    const imagen3 = document.querySelector("#confirmar img");
-    const rectImagen1 = imagen1.getBoundingClientRect();
-    const rectImagen2 = imagen2.getBoundingClientRect();
-    const rectImagen3 = imagen3.getBoundingClientRect();
     const headerHeight = document.querySelector("header").getBoundingClientRect().height;
     let pixels = 25;
-    
+    //Imagenes
+    const imagen1 = document.querySelector("#inicio .imagen img");  
+    const rectImagen1 = imagen1.getBoundingClientRect(); 
 
     // Verifica si es un dispositivo móvil
     const isMobile = window.innerWidth <= 768; // Ajusta según tus necesidades
 
     // Calcula una nueva posición basada en el desplazamiento
     if (isMobile) {
+        const imagen2 = document.querySelector("#participa img");
+        const imagen3 = document.querySelector("#confirmar img");
+        const rectImagen2 = imagen2.getBoundingClientRect();
+        const rectImagen3 = imagen3.getBoundingClientRect();
         //pixels = 8
         // IMAGEN 1
         if (screenHeight > rectImagen1.top && headerHeight < rectImagen1.bottom) {
@@ -86,7 +84,7 @@ function scrollImage() {
 
     } else {
         // IMAGEN 1
-        let nuevaPosicion1 = 70 + (window.scrollY - rectImagen2.top) / 50;
+        let nuevaPosicion1 = 70 + (window.scrollY - rectImagen1.top) / 50;
         if (nuevaPosicion1 < 0) nuevaPosicion1 = 0;
         if (nuevaPosicion1 > 100) nuevaPosicion1 = 100;
         imagen1.style.objectPosition = nuevaPosicion1 + '%';
