@@ -168,6 +168,8 @@ img {
 	  background-color: black;
 	  top: 0;
 	  bottom: 0;
+	  height: var(--timeline-after-height);
+	  transition: height 5s ease-in-out;
 	}
 
 	/* Container around content */
