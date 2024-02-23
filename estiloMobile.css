@@ -1,5 +1,13 @@
  /* Estilos para dispositivos móviles */
         @media (max-width: 767px) {
+
+nav {
+        display: none;
+    }
+
+    .burger-icon {
+        display: block;
+    }
             
 
     header, footer {
