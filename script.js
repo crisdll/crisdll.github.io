@@ -7,7 +7,7 @@ if (performance.navigation.type === 1) {
 
 function toggleNav() {
         var nav = document.querySelector('nav');
-        nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+        nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
 }
 
 // Calcula la cuenta atrás
