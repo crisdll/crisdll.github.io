@@ -96,6 +96,7 @@ function scrollImage() {
     const max_height = document.querySelector('.timeline').getBoundingClientRect().height - pixels;
     let t_height = screenHeight-document.querySelector('.timeline .container').getBoundingClientRect().top-pixels
     if(t_height> max_height) t_height = max_height ;
+    if(t_height < 0) t_height = 0;
     document.querySelector('.timeline').style.setProperty('--timeline-after-height', t_height+"px");
 }
 
