@@ -83,7 +83,6 @@ function scrollImage() {
 
     //Horario
     Array.from(document.querySelector('.timeline').children).forEach(function(child){
-        console.log(child)
         const rect = child.getBoundingClientRect()
         if(screenHeight > rect.top && headerHeight < rect.bottom){
             child.style.opacity=1
