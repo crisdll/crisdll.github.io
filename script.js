@@ -39,10 +39,10 @@ function sectionSelection() {
 
 function appear(element,headerHeight){
     const rect = element.getBoundingClientRect()
-        if(screenHeight > element.top && headerHeight < rect.bottom){
-            child.style.opacity=1
+        if(screenHeight > rect.top && headerHeight < rect.bottom){
+            element.style.opacity=1
         }else{
-            child.style.opacity=0
+            element.style.opacity=0
         }
 }
 
