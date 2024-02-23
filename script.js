@@ -48,6 +48,7 @@ function scrollImage() {
     const rectImagen2 = imagen2.getBoundingClientRect();
     const rectImagen3 = imagen3.getBoundingClientRect();
     const headerHeight = document.querySelector("header").getBoundingClientRect().height;
+    let pixels = 50;
     
 
     // Verifica si es un dispositivo móvil
@@ -55,6 +56,7 @@ function scrollImage() {
 
     // Calcula una nueva posición basada en el desplazamiento
     if (isMobile) {
+        //pixels = 25
         // IMAGEN 1
         if (screenHeight > rectImagen1.top && headerHeight < rectImagen1.bottom) {
             let nuevaPosicion1 = (1 - ((rectImagen1.top + rectImagen1.height - headerHeight) / (screenHeight + rectImagen1.height - headerHeight))) * 100
@@ -91,9 +93,9 @@ function scrollImage() {
         }
     })  
     //Horario line
-    const max_height = document.querySelector('.timeline').getBoundingClientRect().height;
-    let t_height = screenHeight-document.querySelector('.timeline .container').getBoundingClientRect().top-50
-    if(t_height> max_height) t_height = max_height;
+    const max_height = document.querySelector('.timeline').getBoundingClientRect().height - pixels;
+    let t_height = screenHeight-document.querySelector('.timeline .container').getBoundingClientRect().top-pixels
+    if(t_height> max_height) t_height = max_height ;
     document.querySelector('.timeline').style.setProperty('--timeline-after-height', t_height+"px");
 }
 
