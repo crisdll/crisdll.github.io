@@ -1,3 +1,5 @@
+const screenHeight = window.innerHeight;
+
 if (performance.navigation.type === 1) {
     // La página se ha cargado mediante recarga o navegación
     window.location.href = "https://crisdll.github.io"; // Recarga la página
@@ -37,6 +39,8 @@ function sectionSelection() {
 
 
 function scrollImage() {
+
+    //Imagenes
     const imagen1 = document.querySelector("#inicio .imagen img");
     const imagen2 = document.querySelector("#participa img");
     const imagen3 = document.querySelector("#confirmar img");
@@ -44,7 +48,7 @@ function scrollImage() {
     const rectImagen2 = imagen2.getBoundingClientRect();
     const rectImagen3 = imagen3.getBoundingClientRect();
     const headerHeight = document.querySelector("header").getBoundingClientRect().height;
-    const screenHeight = window.innerHeight;
+    
 
     // Verifica si es un dispositivo móvil
     const isMobile = window.innerWidth <= 768; // Ajusta según tus necesidades
@@ -77,11 +81,16 @@ function scrollImage() {
         imagen1.style.objectPosition = nuevaPosicion1 + '%';
     }
 
-
-
-
-
-
+    //Horario
+    Array.from(document.querySelector('.timeline').children).forEach(function(child){
+        console.log(child)
+        const rect = child.getBoundingClientRect()
+        if(screenHeight > rectImagen1.top && headerHeight < rectImagen1.bottom){
+            child.style.opacity=1
+        }else{
+            child.style.opacity=0
+        }
+    })  
 }
 
 
