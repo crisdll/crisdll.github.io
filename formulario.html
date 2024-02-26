@@ -37,7 +37,7 @@
 
   <h1>Asistencia a la Boda</h1>
 
-  <form action="#" method="post">
+  <form action="URL_DE_TU_SCRIPT" method="post">
     <label for="nombre">Nombre completo:</label>
     <input type="text" id="nombre" name="nombre" required>
 
@@ -50,11 +50,41 @@
       <option value="no">No, no podré asistir</option>
     </select>
 
+    <label for="num_acompanantes">Número de acompañantes:</label>
+    <input type="number" id="num_acompanantes" name="num_acompanantes" min="0" value="0" required>
+    
+    <!-- Sección para los nombres de los acompañantes -->
+    <div id="acompanantes_section" style="display: none;">
+      <label for="acompanantes">Nombres de los acompañantes:</label>
+      <div id="nombres_acompanantes"></div>
+    </div>
+
     <label for="mensaje">Mensaje adicional:</label>
     <textarea id="mensaje" name="mensaje" rows="4"></textarea>
 
     <button type="submit">Enviar Confirmación</button>
   </form>
+
+  <script>
+    document.getElementById('num_acompanantes').addEventListener('input', function() {
+      var numAcompanantes = this.value;
+      var nombresAcompanantesDiv = document.getElementById('nombres_acompanantes');
+      nombresAcompanantesDiv.innerHTML = '';
+
+      for (var i = 1; i <= numAcompanantes; i++) {
+        var inputNombre = document.createElement('input');
+        inputNombre.type = 'text';
+        inputNombre.name = 'acompanante' + i;
+        inputNombre.placeholder = 'Nombre del acompañante ' + i;
+        nombresAcompanantesDiv.appendChild(inputNombre);
+        nombresAcompanantesDiv.appendChild(document.createElement('br'));
+      }
+
+      // Mostrar o ocultar la sección de acompañantes según el número ingresado
+      var acompanantesSection = document.getElementById('acompanantes_section');
+      acompanantesSection.style.display = numAcompanantes > 0 ? 'block' : 'none';
+    });
+  </script>
 
 </body>
 </html>
