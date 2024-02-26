@@ -21,6 +21,7 @@ function toggleNav() {
             body.style.overflow = 'hidden'; // Disable scrolling
             burgerIcon.innerHTML = 'close';
         }
+        burgerIcon.classList.toggle('active');
     }
 }
 
