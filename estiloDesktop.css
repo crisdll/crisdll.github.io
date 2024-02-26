@@ -219,6 +219,11 @@ nav {
 		padding: 0px 70px;
 	}
 
+	#alojarse img,
+	#actividades img{
+		max-width: 250px
+	}
+
 	#llegar .mapa	 {
       height: 400px;
       margin: 0px 0px -130px 160px;
