@@ -10,13 +10,16 @@ function toggleNav() {
     if(isMobile){
         var nav = document.querySelector('nav');
         var body = document.body;
+        var burgerIcon = document.getElementById('i');
 
         if (nav.style.display === 'flex') {
             nav.style.display = 'none';
             body.style.overflow = 'auto'; // Re-enable scrolling
+            burgerIcon.innerHTML = 'menu';
         } else {
             nav.style.display = 'flex';
             body.style.overflow = 'hidden'; // Disable scrolling
+            burgerIcon.innerHTML = 'close';
         }
     }
 }
