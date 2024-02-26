@@ -123,11 +123,12 @@ nav {
 	  font-size: 20px;
 	  }
 
-    #inicio .imagen,
-	#llegar .mapa	 {
+    #inicio .imagen, {
       height: 800px;
       margin-bottom: -130px;
     }
+
+	
 
     
 	
@@ -209,4 +210,9 @@ nav {
 		font-size: 100px;
 		text-align: center;
 	}
+
+	#llegar .mapa	 {
+      height: 400px;
+      margin: 0px 0px -130px 160px;
+    }
 }
