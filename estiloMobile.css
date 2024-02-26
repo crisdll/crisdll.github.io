@@ -103,11 +103,7 @@ nav {
 	    padding: 20px 0px;
 	}
 
-	#inicio > div,
-	#horario > div,
-	#confirmar > div,
-	#viaje > div,
-	#participa > div 	{
+	section > div 	{
       padding: 0px 20px;
     }
 		#under-header{height:1px;}
