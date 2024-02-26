@@ -214,14 +214,22 @@ nav {
 		padding: 0px 0px 30px 0px;
 	}
 
-	#alojarse p,
-	#actividades p{
+	#viaje-estancia h3 {
+		margin: 10px 0px;
+	}
+
+	#alojarse > p,
+	#actividades > p{
 		padding: 0px 70px;
 	}
 
+	#alojarse > div > div > div,
+	#actividades > div > div >div{
+		max-width: 345px;
+	}
 	#alojarse img,
-	#actividades img{
-		max-width: 250px
+	#actividades img {
+		max-height: 440px;
 	}
 
 	#llegar .mapa	 {
