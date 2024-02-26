@@ -48,7 +48,7 @@ function sectionSelection() {
 
     sections.forEach(function (section, index) {
         var rect = section.getBoundingClientRect();
-        if (rect.top <= 50 && rect.bottom >= 50) {
+        if (rect.top - 80 <= 50 && rect.bottom >= 50) {
             navLinks.forEach(function (link) {
                 link.classList.remove('active');
             });
