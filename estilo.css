@@ -151,7 +151,8 @@ section {
       width: 100%;
     }
 
-    #inicio .imagen {
+    #inicio .imagen,
+	#llegar .mapa {
       text-align: right;
       position: relative; /* Añadido para posicionar correctamente el div solapado */
       overflow: hidden;
