@@ -41,8 +41,8 @@
     <label for="nombre">Nombre completo:</label>
     <input type="text" id="nombre" name="nombre" required>
 
-    <label for="correo">Telefono:</label>
-    <input type="phone" id="tel" name="tel" required>
+    <label for="tel">Teléfono:</label>
+    <input type="tel" id="tel" name="tel" required>
 
     <label for="asistencia">¿Asistirás a la boda?</label>
     <select id="asistencia" name="asistencia" required>
@@ -62,29 +62,82 @@
     <label for="mensaje">Alergias/Comentarios:</label>
     <textarea id="mensaje" name="mensaje" rows="4"></textarea>
 
+    <!-- Opciones de transporte -->
+    <label for="transporte">¿Necesitas transporte?</label>
+    <select id="transporte" name="transporte">
+      <option value="no">No</option>
+      <option value="ida">Solo ida</option>
+      <option value="vuelta">Solo vuelta</option>
+      <option value="ida_vuelta">Ida y vuelta</option>
+    </select>
+
+    <!-- Lugares de salida y llegada -->
+    <div id="lugares_transport_section" style="display: none;">
+      <label for="salida">Lugar de salida:</label>
+      <select id="salida" name="salida">
+        <option value="barcelona">Barcelona</option>
+        <option value="calella">Calella</option>
+      </select>
+
+      <label for="llegada">Lugar de llegada:</label>
+      <select id="llegada" name="llegada">
+        <option value="barcelona">Barcelona</option>
+        <option value="calella">Calella</option>
+      </select>
+    </div>
+
     <button type="submit">Enviar Confirmación</button>
   </form>
 
   <script>
-    document.getElementById('num_acompanantes').addEventListener('input', function() {
-      var numAcompanantes = this.value;
-      var nombresAcompanantesDiv = document.getElementById('nombres_acompanantes');
-      nombresAcompanantesDiv.innerHTML = '';
+  document.getElementById('num_acompanantes').addEventListener('input', function() {
+    var numAcompanantes = this.value;
+    var nombresAcompanantesDiv = document.getElementById('nombres_acompanantes');
+    nombresAcompanantesDiv.innerHTML = '';
 
-      for (var i = 1; i <= numAcompanantes; i++) {
-        var inputNombre = document.createElement('input');
-        inputNombre.type = 'text';
-        inputNombre.name = 'acompanante' + i;
-        inputNombre.placeholder = 'Nombre del acompañante ' + i;
-        nombresAcompanantesDiv.appendChild(inputNombre);
-        nombresAcompanantesDiv.appendChild(document.createElement('br'));
-      }
+    for (var i = 1; i <= numAcompanantes; i++) {
+      var inputNombre = document.createElement('input');
+      inputNombre.type = 'text';
+      inputNombre.name = 'acompanante' + i;
+      inputNombre.placeholder = 'Nombre del acompañante ' + i;
+      nombresAcompanantesDiv.appendChild(inputNombre);
+      nombresAcompanantesDiv.appendChild(document.createElement('br'));
+    }
 
-      // Mostrar o ocultar la sección de acompañantes según el número ingresado
-      var acompanantesSection = document.getElementById('acompanantes_section');
-      acompanantesSection.style.display = numAcompanantes > 0 ? 'block' : 'none';
-    });
-  </script>
+    // Mostrar u ocultar la sección de acompañantes según el número ingresado
+    var acompanantesSection = document.getElementById('acompanantes_section');
+    acompanantesSection.style.display = numAcompanantes > 0 ? 'block' : 'none';
+  });
+
+  document.getElementById('transporte').addEventListener('change', function() {
+    var lugaresTransportSection = document.getElementById('lugares_transport_section');
+    var selectedOption = this.value;
+
+    // Mostrar u ocultar la sección de lugares de transporte según la opción seleccionada
+    lugaresTransportSection.style.display = selectedOption !== 'no' ? 'block' : 'none';
+
+    // Mostrar u ocultar los lugares de acuerdo con la opción seleccionada
+    var salidaLabel = document.getElementById('salida_label');
+    var llegadaLabel = document.getElementById('llegada_label');
+    var salidaSelect = document.getElementById('salida');
+    var llegadaSelect = document.getElementById('llegada');
+
+    if (selectedOption === 'ida') {
+      salidaLabel.textContent = 'Lugar de salida:';
+      llegadaLabel.style.display = 'none';
+      llegadaSelect.style.display = 'none';
+    } else if (selectedOption === 'vuelta') {
+      salidaLabel.style.display = 'none';
+      salidaSelect.style.display = 'none';
+      llegadaLabel.textContent = 'Lugar de llegada:';
+    } else if (selectedOption === 'ida_vuelta') {
+      salidaLabel.textContent = 'Lugar de salida:';
+      llegadaLabel.textContent = 'Lugar de llegada:';
+      llegadaLabel.style.display = 'block';
+      salidaSelect.style.display = 'block';
+    }
+  });
+</script>
 
 </body>
 </html>
