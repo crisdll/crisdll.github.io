@@ -219,9 +219,10 @@ nav {
 	}
 
 	#alojarse > p,
-	#actividades > p{
-		padding: 0px 70px;
+	#actividades > p {
+		padding: 0px 70px 30px 70px;
 	}
+
 
 	#alojarse > div > div > div,
 	#actividades > div > div >div{
