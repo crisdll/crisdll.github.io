@@ -138,7 +138,8 @@ nav {
 	  font-size: 15px;
 	  }
 
-    #inicio .imagen {
+    #inicio .imagen,
+	#llegar .mapa {
       height: 300px;
       margin: 0px -20px;
     }
