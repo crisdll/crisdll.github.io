@@ -123,7 +123,8 @@ nav {
 	  font-size: 20px;
 	  }
 
-    #inicio .imagen {
+    #inicio .imagen,
+	#estancia .mapa	 {
       height: 800px;
       margin-bottom: -130px;
     }
