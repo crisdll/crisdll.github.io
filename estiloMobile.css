@@ -19,6 +19,14 @@ nav {
         display: block;
         z-index: 1;
     }
+		
+    .burger-icon i {
+        transition: transform 0.3s ease; /* Cambia 0.3s al valor que desees para ajustar la velocidad de la animación */
+    }
+
+    .burger-icon.active i {
+        transform: rotate(45deg);
+    }
             
 
     header, footer {
