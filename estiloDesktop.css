@@ -77,11 +77,7 @@ nav {
 	    padding: 25px 0px;
 	}
 
-	#inicio > div,
-	#horario > div,
-	#confirmar > div,
-	#viaje > div,
-	#participa > div 	{
+	section > div 	{
       padding: 0px 70px;
     }
 
