@@ -240,5 +240,10 @@ nav {
 	#alojarse img,
 	#actividades img{
 		max-height:400px
-}
+	}
+	#viaje a,
+	#alojarse a,
+	#actividades a{
+		margin-bottom:20px
+	}
 }
