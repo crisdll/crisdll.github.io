@@ -185,6 +185,12 @@ nav {
 	#confirmar > div > div:nth-child(1),
 	#participa > div > div:nth-child(1){
 		width:100%
+		display: flex;
+	    	flex-direction: column;
+	    	align-items: center;
+	}
+	#participa > div > div:nth-child(1) > h4{
+		width:100%;
 	}
 	
 	
