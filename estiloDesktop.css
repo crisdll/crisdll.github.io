@@ -210,6 +210,9 @@ nav {
 		font-size: 100px;
 		text-align: center;
 	}
+	#viaje&estancia p{
+		padding: 0px 0px 30px 0px;
+	}
 
 	#llegar .mapa	 {
       height: 400px;
