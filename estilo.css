@@ -209,7 +209,7 @@ section {
 	transition: opacity 5s linear;
 	}
 	
-	#horario,#viaje{
+	#horario,#viaje,#alojarse{
 	background-color: var(--bg-overlay-color);
 	}
 	
