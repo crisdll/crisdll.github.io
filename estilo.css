@@ -218,7 +218,9 @@ section {
 	
 	
 	
-	#viaje > div > div {
+	#viaje > div > div,
+	#alojarse > div,
+	#actividades >div {
 		display:flex;
 		flex-wrap:wrap;
 		justify-content:space-between;
