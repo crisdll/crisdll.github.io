@@ -106,7 +106,7 @@ nav {
 	section > div 	{
       padding: 0px 20px;
     }
-		#under-header{height:1px;}
+#under-header{height:1px;}
 	  
 #inicio{
 	margin-top: 80px; 
@@ -231,4 +231,14 @@ nav {
 		font-size: 36px;
 		text-align: center;
 	}
-        }
+	#viaje-estancia #under-header{
+		height: 80px;
+	}
+	#viaje-estancia section>p{
+		margin:0px 20px;
+	}
+	#alojarse img,
+	#actividades img{
+		max-height:400px
+}
+}
