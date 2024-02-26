@@ -10,7 +10,7 @@ function toggleNav() {
     if(isMobile){
         var nav = document.querySelector('nav');
         var body = document.body;
-        var burgerIcon = document.getElementById('i');
+        var burgerIcon = document.querySelector('.burger-icon i');
 
         if (nav.style.display === 'flex') {
             nav.style.display = 'none';
