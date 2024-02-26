@@ -100,7 +100,9 @@ section {
 
 	#confirmar > div,
 	#viaje > div,
-	#participa > div 	{
+	#participa > div,
+	#alojarse > div,
+	#actividades >div 	{
       display: flex;
       flex-wrap: wrap;
       justify-content: space-evenly;
