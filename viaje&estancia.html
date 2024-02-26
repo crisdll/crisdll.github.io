@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tu Sitio</title>
+
+<script src="script.js"></script>
+	
+  <!-- Enlace a Google Fonts -->
+  <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Montserrat">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!-- Enlazar el primer archivo CSS -->
+<link rel="stylesheet" href="estilo.css">
+<link rel="stylesheet" href="estiloDesktop.css">
+<link rel="stylesheet" href="estiloMobile.css">
+
+
+</head>
+<body>
+  <header>
+    <img src="images/LogoBoda2.png" alt="Logo" style="transform:scale(1.4)";">
+    <div class="burger-icon" onclick="toggleNav()">
+        <i class="material-icons">menu</i>
+    </div>
+    <nav>
+      <a href="#inicio" onclick="toggleNav()">INICIO</a>
+      <a href="#horario" onclick="toggleNav()">HORARIO</a>
+      <a href="#confirmar" onclick="toggleNav()">CONFRIMAR ASISTENCIA</a>
+      <a href="#viaje" onclick="toggleNav()">VIAJE Y ESTANCIA</a>
+      <a href="#participa" onclick="toggleNav()">PARTICIPA</a>
+    </nav>
+  </header>
+	<div id="under-header"></div>
+	<section id="llegar">
+		<div>
+			<h3>Nos vamos a casar</h3>
+			<h1> ARIAN & <br> CRISTINA </h1>
+		</div>
+		<div>
+			<div class="texto">
+			  <div class="mensaje">
+				<h4>Y nos haría mucha ilusión compartir este día especial contigo</h4>
+			  </div>
+			  <div class="cuenta-atras" id="cuentaAtras" style="opacity: 0;">
+				<div id="dias"> 
+					<h4></h4>
+					<div>Días</div>
+				</div>
+				<div id="horas"> 
+					<h4></h4>
+					<div>Horas</div>
+				</div>
+				<div id="min"> 
+					<h4></h4>
+					<div>Min</div>
+				</div>
+				<div id="seg"> 
+					<h4></h4>
+					<div>Seg</div>
+				</div>
+			  </div>
+			  <div class="bajo-cuenta">
+				<p>Sábado, 10 de mayo de 2025<br>
+					La Hacienda [del hogar gallego], <br> 
+					Sant Cebrià de Vallalta
+				</p>
+			  </div>
+			</div>
+			<div class="imagen">
+			  <img src="images/Toscana.jpg" alt="Imagen Casamiento">
+			</div>
+		</div>
+		<div id="solapado"></div>
+	</section>
+
+  <section id="alojarse">
+    <h2>Horario</h2>
+	<div>
+		<div class="imagen">
+			<img src="images/Egipt.jpg" alt="Imagen Casamiento">
+		</div>
+		<div class="timeline">
+		  <div class="container">
+			  <h4>12:30 - Llegada de invitados</h4>
+		  </div>
+		  <div class="container">
+			  <h4>13:00 - Ceremonia</h4>
+		  </div>
+		  <div class="container">
+			  <h4>14:00 - Aperitivo</h4>
+		  </div>
+		  <div class="container">
+			  <h4>16:00 - Comida</h4>
+		  </div>
+		  <div class="container">
+			  <h4>19:00 - Baile</h4>
+		  </div>
+		  <div class="container">
+			  <h4>23:00 - Fin de la Fiesta
+				<br><span style="font-size:18px"> o no...</span>
+		  </div>
+		</div>
+	</div>
+  </section>
+
+  <section id="actividades">
+	<div>
+		<div>
+			<h4>¿Nos acompañas o te lo pierdes?</h4>
+		</div>
+		<div>
+			<p>
+				Para confirmar tu asistencia a la boda sólo tienes que rellenar el siguiente formulario.
+			</p>
+			<button> CONFIRMA ASISTENCIA </button>
+		</div>
+	</div>
+	<div></div>
+	<img src="images/Cuba2.jpg" alt="Imagen Casamiento">
+  </section>
+
+  <section id="viaje">
+  <h2>Viaje y estancia</h2>
+	<div>
+		<div>
+			<div>
+				<h3> 01. Cómo llegar </h3>
+				<p> Instrucciones para llegar al evento <br> <a href="https://www.ejemplo.com">MAPA Y DETALLES</a> </p>
+			</div>
+			<div>
+				<h3> 02. Dónde alojarse </h3>
+				<p> Hoteles y B&Bs para consultar <br> <a href="https://www.ejemplo.com">OPCIÓN DE HOTELES</a> </p>
+			</div>
+			<div>
+				<h3> 03. Cuando estés allí </h3>
+				<p> Cosas divertidas que hacer en la zona <br> <a href="https://www.ejemplo.com">LAS RECOMENDACIONES</a> </p>
+			</div>
+		</div>
+	</div>  
+  </section>
+
+  <section id="participa">
+    <div>
+		<div>
+			<h4>¡Participa en nuestra fiesta!</h4>
+			<p>
+				Éste es un dia muy especial para nosotros, pero queremos que también sea un día especial para cada uno de vosotros. Por eso, te invitamos a ser parte de nuestra banda sonora.
+				<br><br>
+				¿Cuál es esa canción que te hace sonreír, bailar o recordar momentos increíbles? ¡Cuéntanos! Deja tus sugerencias abajo y hagamos juntos que este día sea único
+			</p>
+			<button> PARTICIPA </button>
+			<p> ¡Gracias por ser parte de nuestra historia! </p>
+		</div>
+		<div>
+			<img src="images/Puigmal.jpg" alt="Imagen Casamiento">
+		</div>	
+	</div>
+	<h2 > ¡Esperamos verte! </h2>
+  </section>
+
+  <footer>
+    <p>Contacto:
+    <br>Arian +34 617 41 52 24
+    <br>Cristina +34 696 53 44 58
+    <br> <span style="font-size: 14px;">(Teléfono o WhatsApp) </span>
+  </footer>
+</body>
+</html>
