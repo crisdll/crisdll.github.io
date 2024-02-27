@@ -130,7 +130,7 @@ function scrollImage() {
 // Llama a la función de actualización al cargar la página
 window.onload = function () {
     sectionSelection();
-    if(window.location.href == "https://crisdll.github.io"){
+    if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
     actualizarCuentaAtras();
     // Actualiza la cuenta atrás cada segundo
     setInterval(actualizarCuentaAtras, 1000);
