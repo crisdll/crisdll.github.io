@@ -1,3 +1,4 @@
+window.onload = function () {
 document.getElementById('num_acompanantes').addEventListener('input', function() {
     var numAcompanantes = this.value;
     var nombresAcompanantesDiv = document.getElementById('nombres_acompanantes');
@@ -51,3 +52,4 @@ document.getElementById('num_acompanantes').addEventListener('input', function()
       llegadaSelect.style.display = 'block';
     }
   });
+}
