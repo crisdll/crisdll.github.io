@@ -129,11 +129,13 @@ function scrollImage() {
 
 // Llama a la función de actualización al cargar la página
 window.onload = function () {
+    sectionSelection();
+    if(window.location.href == "https://crisdll.github.io"){
     actualizarCuentaAtras();
     // Actualiza la cuenta atrás cada segundo
     setInterval(actualizarCuentaAtras, 1000);
     // Llama a sectionSelection() también al cargar la página para establecer el estado inicial
-    sectionSelection();
+    
     scrollImage();
 
     // Agrega un event listener para gestionar el scroll
@@ -141,4 +143,5 @@ window.onload = function () {
         sectionSelection();
         scrollImage();
     });
+    }
 };
