@@ -233,10 +233,6 @@ section {
 
 
 /**********************Formulario ************************/
-body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-    }
     form {
       max-width: 600px;
       margin: 0 auto;
