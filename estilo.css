@@ -241,9 +241,14 @@ section {
       display: block;
       margin-bottom: 8px;
     }
-    input, select, textarea {
-      width: 100%;
-      padding: 8px;
-      margin-bottom: 16px;
-      box-sizing: border-box;
-    }
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px black solid;
+    height: 50px;
+    font-family: 'Montserrat';
+    font-size: 14px;
+}
