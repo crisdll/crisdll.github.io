@@ -18,8 +18,21 @@
 </head>
 
 <body>
+ <header>
+    <a href="#inicio"><img src="images/LogoBoda2.png" alt="Logo" style="transform:scale(1.4)";"></a>
+    <div class="burger-icon" onclick="toggleNav()">
+        <i class="material-icons">menu</i>
+    </div>
+    <nav>
+      <a href="#inicio" onclick="toggleNav()">INICIO</a>
+      <a href="#horario" onclick="toggleNav()">HORARIO</a>
+      <a href="#confirmar" onclick="toggleNav()">CONFRIMAR ASISTENCIA</a>
+      <a href="#viaje" onclick="toggleNav()">VIAJE Y ESTANCIA</a>
+      <a href="#participa" onclick="toggleNav()">PARTICIPA</a>
+    </nav>
+  </header>
 
-  <h1>Formulario de Asistencia</h1>
+  <h2>Formulario de Asistencia</h2>
 
   <form action="URL_DE_TU_SCRIPT" method="post">
     <label for="nombre">Nombre completo:</label>
