@@ -251,4 +251,6 @@ input, select, textarea {
     height: 50px;
     font-family: 'Montserrat';
     font-size: 14px;
+    color:black;
+	background-color:transparent;
 }
