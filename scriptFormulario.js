@@ -1,3 +1,4 @@
+console.log("entra")
 window.onload = function () {
 console.log("ejecutado")
 document.getElementById('num_acompanantes').addEventListener('input', function() {
