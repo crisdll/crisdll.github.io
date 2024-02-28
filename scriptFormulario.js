@@ -61,7 +61,9 @@ function enviarFormulario() {
 
     // Muestra un icono de carga o mensaje de "pensando"
     var respuestaDiv = document.getElementById('respuesta');
+    respuestaDiv.classList.add('form-tooltip');
     respuestaDiv.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Enviando...';
+
 
     // Obtiene los datos del formulario
     var formData = new FormData(document.getElementsByTagName('form')[0]);
