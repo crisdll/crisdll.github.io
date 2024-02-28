@@ -237,4 +237,8 @@ nav {
       height: 400px;
       margin: 0px 0px -130px 160px;
     }
+/**********************Formulario ************************/
+    form {
+      max-width: 600px;
+    }
 }
