@@ -257,4 +257,15 @@ form >div:last-child{
 	display: flex;
     justify-content: center;
 }
-
+.form-tooltip{
+    position: fixed;
+    background: white;
+    z-index: 1;
+    top: 80px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    right: 0;
+}
