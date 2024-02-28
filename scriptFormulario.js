@@ -1,5 +1,5 @@
 console.log("entra")
-window.onload = function () {
+document.addEventListener('DOMContentLoaded', function() {
 console.log("ejecutado")
 document.getElementById('num_acompanantes').addEventListener('input', function() {
     var numAcompanantes = this.value;
@@ -54,4 +54,4 @@ document.getElementById('num_acompanantes').addEventListener('input', function()
       llegadaSelect.style.display = 'block';
     }
   });
-}
+})
