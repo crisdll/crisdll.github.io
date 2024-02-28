@@ -53,3 +53,28 @@ document.getElementById('num_acompanantes').addEventListener('input', function()
     }
   });
 })
+
+function enviarFormulario() {
+    // Deshabilita el botón para evitar clics repetidos
+    var botonEnviar = document.querySelector('button[type="button"]');
+    botonEnviar.disabled = true;
+
+    // Muestra un icono de carga o mensaje de "pensando"
+    var respuestaDiv = document.getElementById('respuesta');
+    respuestaDiv.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Enviando...';
+
+    // Obtiene los datos del formulario
+    var formData = new FormData(document.getElementsByTagName('form')[0]);
+
+    // Realiza una solicitud AJAX para enviar los datos al script de Google Apps
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'https://script.google.com/macros/s/AKfycbywOLK6A912lr4r4vIEF2kpNnGrCNgQjRcRvpPU0NDOLnq8HHWLzCxJRgnN8xvjW-Vu/exec', true);
+    xhr.onload = function() {
+      // Habilita el botón después de la respuesta
+      botonEnviar.disabled = false;
+
+      // Muestra la respuesta en el div
+      respuestaDiv.innerHTML = xhr.responseText;
+    };
+    xhr.send(formData);
+  }
