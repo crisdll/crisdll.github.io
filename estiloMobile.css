@@ -106,11 +106,9 @@ nav {
 	section > div 	{
       padding: 0px 20px;
     }
-#under-header{height:1px;}
+#under-header{height:80px;}
 	  
-#inicio{
-	margin-top: 80px; 
-}
+
 #inicio h4{
 	margin 40px 0px;
 }
