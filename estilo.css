@@ -251,6 +251,7 @@ input, select, textarea {
     font-size: 14px;
     color:black;
     background-color:transparent;
+	    border-radius: 0px;
 }
 form >div:last-child{
 	display: flex;
