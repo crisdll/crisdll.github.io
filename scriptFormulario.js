@@ -1,6 +1,4 @@
-console.log("entra")
 document.addEventListener('DOMContentLoaded', function() {
-console.log("ejecutado")
 document.getElementById('num_acompanantes').addEventListener('input', function() {
     var numAcompanantes = this.value;
     var nombresAcompanantesDiv = document.getElementById('nombres_acompanantes');
