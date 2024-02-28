@@ -239,12 +239,11 @@ section {
     }
     label {
       display: block;
-      margin-bottom: 8px;
     }
 input, select, textarea {
     width: 100%;
     padding: 8px;
-    margin-bottom: 16px;
+    margin-bottom: 50px;
     box-sizing: border-box;
     border: none;
     border-bottom: 1px black solid;
@@ -252,5 +251,6 @@ input, select, textarea {
     font-family: 'Montserrat';
     font-size: 14px;
     color:black;
-	background-color:transparent;
+    background-color:transparent;
 }
+
