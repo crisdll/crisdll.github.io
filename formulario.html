@@ -56,28 +56,27 @@
     </div>
 
       <!-- Opciones de transporte -->
-    <label for="transporte">¿Necesitas transporte?</label>
-    <select id="transporte" name="transporte">
-      <option value="no">No</option>
-      <option value="ida">Solo ida</option>
-      <option value="vuelta">Solo vuelta</option>
-      <option value="ida_vuelta">Ida y vuelta</option>
+    <label id="transporte_label" for="transporte">¿Necesitas transporte?</label>
+  <select id="transporte" name="transporte">
+    <option value="no">No</option>
+    <option value="ida">Solo ida</option>
+    <option value="vuelta">Solo vuelta</option>
+    <option value="ida_vuelta">Ida y vuelta</option>
+  </select>
+
+  <div id="lugares_transport_section" style="display: none;">
+    <label id="salida_label" for="salida">Lugar de salida:</label>
+    <select id="salida" name="salida">
+      <option value="barcelona">Barcelona</option>
+      <option value="calella">Calella</option>
     </select>
 
-    <!-- Lugares de salida y llegada -->
-    <div id="lugares_transport_section" style="display: none;">
-      <label id="salida_label" for="salida">Lugar de salida:</label>
-      <select id="salida" name="salida">
-        <option value="barcelona">Barcelona</option>
-        <option value="calella">Calella</option>
-      </select>
-
-      <label id="llegada_label" for="llegada">Lugar de llegada:</label>
-      <select id="llegada" name="llegada">
-        <option value="barcelona">Barcelona</option>
-        <option value="calella">Calella</option>
-      </select>
-    </div>
+    <label id="llegada_label" for="llegada">Lugar de llegada:</label>
+    <select id="llegada" name="llegada">
+      <option value="barcelona">Barcelona</option>
+      <option value="calella">Calella</option>
+    </select>
+  </div>
 
     <label for="mensaje">Alergias/Comentarios:</label>
     <textarea id="mensaje" name="mensaje" rows="4"></textarea>
