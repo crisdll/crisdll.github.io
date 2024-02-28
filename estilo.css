@@ -253,4 +253,8 @@ input, select, textarea {
     color:black;
     background-color:transparent;
 }
+form >div:last-child{
+	display: flex;
+    justify-content: center;
+}
 
