@@ -67,7 +67,7 @@ function enviarFormulario() {
 
     // Obtiene los datos del formulario
     var formData = new FormData(document.getElementsByTagName('form')[0]);
-    console.log(formData)
+   console.log('Datos a enviar:', formData);
  for (var pair of formData.entries()) {
     console.log(pair[0] + ': ' + pair[1]);
   }
