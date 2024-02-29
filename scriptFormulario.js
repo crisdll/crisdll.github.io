@@ -67,6 +67,7 @@ function enviarFormulario() {
 
     // Obtiene los datos del formulario
     var formData = new FormData(document.getElementsByTagName('form')[0]);
+    console.log(formData)
 
     // Realiza una solicitud AJAX para enviar los datos al script de Google Apps
     var xhr = new XMLHttpRequest();
