@@ -79,7 +79,7 @@ console.log('Número de elementos en formData:', formDataArray);
 
     // Realiza una solicitud AJAX para enviar los datos al script de Google Apps
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://script.google.com/macros/s/AKfycbwCCBjwFVtES7luTo-VQ8AktZnD7wozYZC2yuU1m9bLQidetqINoO4SKrM1Wz1IjpE/exec', true);
+    xhr.open('POST', 'https://script.google.com/macros/s/AKfycbzwoYIxf3FbBuT2L5u98pUVjTuaXYGN6P20zneAVYEnkUIPch7iT1bSi3uK0iqC0f9t/exec', true);
     xhr.onload = function() {
       // Habilita el botón después de la respuesta
       botonEnviar.disabled = false;
