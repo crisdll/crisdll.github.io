@@ -67,7 +67,12 @@ function enviarFormulario() {
 
     // Obtiene los datos del formulario
     var formData = new FormData(document.getElementsByTagName('form')[0]);
-   console.log('Datos a enviar:', formData);
+// Convertir los resultados de formData.entries() en un array
+var formDataArray = Array.from(formData.entries());
+
+// Ahora puedes acceder al length
+console.log('Número de elementos en formData:', formDataArray);
+
  for (var pair of formData.entries()) {
     console.log(pair[0] + ': ' + pair[1]);
   }
