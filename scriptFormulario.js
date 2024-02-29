@@ -100,8 +100,18 @@ function validarFormulario() {
                 alert("Por favor, ingresa tu nombre completo.");
                 // Evitar que el formulario se envíe
                 return false;
-            }else{
-                enviarFormulario()
             }
+            // Verificar si los acompañantes tienen nombres
+            var numAcompanantes = document.getElementById('num_acompanantes').value;
+            for (var i = 1; i <= numAcompanantes; i++) {
+                var nombreAcompanante = document.getElementsByName('acompanante' + i)[0].value;
+                if (nombreAcompanante.trim() === "") {
+                    // Mostrar un mensaje de error
+                    alert("Por favor, ingresa el nombre de todos los acompañantes.");
+                    // Evitar que el formulario se envíe
+                    return false;
+                }
+            }
+            enviarFormulario()
 
         }
