@@ -89,3 +89,19 @@ console.log('Número de elementos en formData:', formDataArray);
     };
     xhr.send(formData);
   }
+
+function validarFormulario() {
+            // Obtener el valor del campo de nombre completo
+            var nombreCompleto = document.getElementById("nombreCompleto").value;
+
+            // Verificar si el campo está vacío
+            if (nombreCompleto.trim() === "") {
+                // Mostrar un mensaje de error
+                alert("Por favor, ingresa tu nombre completo.");
+                // Evitar que el formulario se envíe
+                return false;
+            }else{
+                enviarFormulario()
+            }
+
+        }
