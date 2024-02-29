@@ -92,7 +92,7 @@ console.log('Número de elementos en formData:', formDataArray);
 
 function validarFormulario() {
             // Obtener el valor del campo de nombre completo
-            var nombreCompleto = document.getElementById("nombreCompleto").value;
+            var nombreCompleto = document.getElementById("nombre").value;
 
             // Verificar si el campo está vacío
             if (nombreCompleto.trim() === "") {
