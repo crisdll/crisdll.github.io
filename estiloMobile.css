@@ -52,7 +52,7 @@ nav {
 		line-height: 70px;
 	}
 
-	h1 .name2{margin-left: 85px;}
+	h1 .name2{text-align: right;margin-right: 10px;}
 	
 	h2{
 	    font-size: 30px;
