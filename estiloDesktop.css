@@ -28,7 +28,12 @@ nav {
 	h1{
 		font-size: 140px;
 		margin: 0px;
-		line-height:140px;
+		line-height: 100px;
+		margin-bottom: 30px;
+	}
+
+	h1 .name2{
+		margin-left:300px
 	}
 	
 	h2{
