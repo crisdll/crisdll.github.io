@@ -18,11 +18,14 @@ document.addEventListener('DOMContentLoaded', function() {
 		acompanantesSection.style.display = numAcompanantes > 0 ? 'block' : 'none';
 	});
 	document.getElementById('hotel').addEventListener('click', function () {
+		console.log("on click hotel")
 		var hotelSection = document.getElementById('hotel_section');
 		var isHotel = this.value;
-		hotelSection.style.display = numAcompanantes === "si" ? 'block' : 'none';
+		console.log(isHotel)
+		hotelSection.style.display = isHotel === "si" ? 'block' : 'none';
 		// Evento para agregar una nueva habitación
 	    	document.getElementById('add_room').addEventListener('click', function () {
+			console.log("on click add Room")
 	        	createRoomSection();
 	    	});
 		// Crear la primera sección de habitación al cargar la página
