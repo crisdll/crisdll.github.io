@@ -148,7 +148,6 @@ function createRoomSection() {
     deleteIcon.style.color = 'indianred';
     deleteIcon.addEventListener('click', function () {
         deleteIcon.parentElement.remove();
-        console.log(deleteIcon.parentElement)
     });
 
     roomDiv.appendChild(hotelSelect);
