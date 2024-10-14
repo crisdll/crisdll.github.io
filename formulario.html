@@ -59,24 +59,22 @@
     <label id="transporte_label" for="transporte">¿Necesitas transporte?</label>
   <select id="transporte" name="transporte">
     <option value="no">No</option>
-    <option value="ida">Solo ida</option>
-    <option value="vuelta">Solo vuelta</option>
-    <option value="ida_vuelta">Ida y vuelta</option>
+    <option value="si">Si</option>
   </select>
 
-  <div id="lugares_transport_section" style="display: none;">
-    <label id="salida_label" for="salida">Lugar de salida:</label>
-    <select id="salida" name="salida">
-      <option value="barcelona">Barcelona</option>
-      <option value="calella">Calella</option>
-    </select>
+	<!-- Opciones de hotel -->
+  <label id="hotel_label" for="transporte">¿Necesitas alojamiento?</label>
+  <select id="hotel" name="hotel">
+    <option value="no">No/Buscaré por mi cuenta</option>
+    <option value="si">Si</option>
+  </select>
 
-    <label id="llegada_label" for="llegada">Lugar de llegada:</label>
-    <select id="llegada" name="llegada">
-      <option value="barcelona">Barcelona</option>
-      <option value="calella">Calella</option>
-    </select>
-  </div>
+<!-- Sección para los nombres de los acompañantes -->
+<div id="hotel_section" style="display: none;">
+    <label for="tipo_hotel">Añade las habitaciones que necesites:</label>
+    <div id="tipo_hotel"></div>
+    <button id="add_room" type="button">+</button>
+</div>
 
     <label for="mensaje">Alergias/Comentarios:</label>
     <textarea id="mensaje" name="mensaje" rows="4"></textarea>
