@@ -270,7 +270,9 @@ form >div:last-child{
     right: 0;
 }
 .room-section{
-	display:flex;
+	display: flex;
+    	align-items: center;
+    	flex-wrap: nowrap;
 }
 .room-section > select{
 	margin: 0px 10px 0px 10px;	
