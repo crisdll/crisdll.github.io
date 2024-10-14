@@ -128,8 +128,9 @@ function createRoomSection() {
         `;
 
         // Crea un ícono de basura para eliminar la sección
-        const deleteIcon = document.createElement('i');
-        deleteIcon.classList.add('fas', 'fa-trash'); // Clases de Font Awesome para el ícono
+        const deleteIcon = document.createElement('span');
+        deleteIcon.classList.add('material-icons'); // Clase de Material Icons
+        deleteIcon.textContent = 'delete'; // Nombre del ícono de basura
         deleteIcon.style.cursor = 'pointer'; // Cambia el cursor para indicar que es clickeable
         deleteIcon.style.marginLeft = '10px'; // Espaciado a la izquierda
         deleteIcon.addEventListener('click', function () {
