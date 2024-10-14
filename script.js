@@ -129,6 +129,7 @@ function scrollImage() {
 
 // Llama a la función de actualización al cargar la página
 window.onload = function () {
+if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
     sectionSelection();
     if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
     actualizarCuentaAtras();
@@ -144,4 +145,5 @@ window.onload = function () {
         scrollImage();
     });
     }
+}
 };
