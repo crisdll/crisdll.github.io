@@ -159,9 +159,9 @@ function createRoomSection() {
         let options = [];
 
         if (hotelType === 'hotel') {
-            options = ['Habitación estándar', 'Suite', 'Habitación familiar'];
+            options = ['Comfort', 'Superior', 'Superior Balcón','Junior Suite','Junior Suite Balcón','Superior Cuádruple','Premium Balcón Jacuzzi Interior','Premium Terraza Jacuzzi Interior','Premium Terraza Jacuzzi Exterior','Privilege Terraza Jacuzzi Exterior','Suite Terraza Jacuzzi Exterior','Suite Privilege Terraza Jacuzzi Exterior'];
         } else if (hotelType === 'apartamento') {
-            options = ['Apartamento de una habitación', 'Apartamento de dos habitaciones'];
+            options = ['ESTUDIO BALCÓN', 'APARTAMENTO 1 HABITACIÓN','APARTAMENTO 1 HABITACIÓN BALCÓN','APARTAMENTO 1 HABITACIÓN TERRAZA','APARTAMENTO 2 HABITACIONES BALCÓN','APARTAMENTO 2 HABITACIONES TERRAZA'];
         }
 
         options.forEach(option => {
