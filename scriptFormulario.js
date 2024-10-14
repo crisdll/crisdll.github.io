@@ -133,6 +133,7 @@ function createRoomSection() {
         deleteIcon.textContent = 'delete'; // Nombre del ícono de basura
         deleteIcon.style.cursor = 'pointer'; // Cambia el cursor para indicar que es clickeable
         deleteIcon.style.marginLeft = '10px'; // Espaciado a la izquierda
+	deleteIcon.style.color = 'indianred'; // color
         deleteIcon.addEventListener('click', function () {
             tipoHotelContainer.removeChild(roomDiv); // Elimina la sección de habitación
         });
