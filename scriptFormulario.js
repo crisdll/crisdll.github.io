@@ -18,39 +18,6 @@ document.getElementById('num_acompanantes').addEventListener('input', function()
     acompanantesSection.style.display = numAcompanantes > 0 ? 'block' : 'none';
   });
 
-  document.getElementById('transporte').addEventListener('change', function() {
-    var lugaresTransportSection = document.getElementById('lugares_transport_section');
-    var salidaLabel = document.getElementById('salida_label');
-    var salidaSelect = document.getElementById('salida');
-    var llegadaLabel = document.getElementById('llegada_label');
-    var llegadaSelect = document.getElementById('llegada');
-
-    // Ocultar todas las opciones de salida y llegada por defecto
-    salidaLabel.style.display = 'none';
-    salidaSelect.style.display = 'none';
-    llegadaLabel.style.display = 'none';
-    llegadaSelect.style.display = 'none';
-
-    // Mostrar u ocultar la sección de lugares de transporte según la opción seleccionada
-    lugaresTransportSection.style.display = this.value !== 'no' ? 'block' : 'none';
-
-    // Mostrar u ocultar los lugares de acuerdo con la opción seleccionada
-    if (this.value === 'ida_vuelta') {
-      salidaLabel.textContent = 'Lugar de salida:';
-      llegadaLabel.textContent = 'Lugar de llegada:';
-      salidaLabel.style.display = 'block';
-      salidaSelect.style.display = 'block';
-      llegadaLabel.style.display = 'block';
-      llegadaSelect.style.display = 'block';
-    } else if (this.value === 'ida') {
-      salidaLabel.textContent = 'Lugar de salida:';
-      salidaLabel.style.display = 'block';
-      salidaSelect.style.display = 'block';
-    } else if (this.value === 'vuelta') {
-      llegadaLabel.textContent = 'Lugar de llegada:';
-      llegadaLabel.style.display = 'block';
-      llegadaSelect.style.display = 'block';
-    }
   });
 })
 
