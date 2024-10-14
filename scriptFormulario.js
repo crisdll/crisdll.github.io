@@ -146,6 +146,7 @@ function createRoomSection() {
     deleteIcon.style.cursor = 'pointer';
     deleteIcon.style.marginLeft = '10px';
     deleteIcon.style.color = 'indianred';
+    deleteIcon.style.fontSize = '22px';
     deleteIcon.addEventListener('click', function () {
         deleteIcon.parentElement.remove();
     });
@@ -191,6 +192,6 @@ function updatePersonOptions(tipoHabitacion, personSelect) {
         opt.value = i;
         opt.textContent = i;
         personSelect.appendChild(opt);
-	personSelect.style.max-width= '45px';
+	personSelect.style.maxW-idth= '45px';
     }
 }
