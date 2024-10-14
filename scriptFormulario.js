@@ -192,6 +192,6 @@ function updatePersonOptions(tipoHabitacion, personSelect) {
         opt.value = i;
         opt.textContent = i;
         personSelect.appendChild(opt);
-	personSelect.style.maxW-idth= '45px';
+	personSelect.style.maxWidth= '45px';
     }
 }
