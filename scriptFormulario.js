@@ -25,12 +25,11 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (isHotel === "si" && document.getElementById('tipo_hotel').childElementCount === 0) {
 		        createRoomSection();
 		    }
-		// Evento para agregar una nueva habitación
+	});
+	// Evento para agregar una nueva habitación
 	    	document.getElementById('add_room').addEventListener('click', function () {
-			console.log("on click add Room")
 	        	createRoomSection();
-	    	});
-	});	
+	    	});	
 });
 
 function enviarFormulario() {
