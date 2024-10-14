@@ -147,7 +147,8 @@ function createRoomSection() {
     deleteIcon.style.marginLeft = '10px';
     deleteIcon.style.color = 'indianred';
     deleteIcon.addEventListener('click', function () {
-        tipoHotelContainer.removeChild(roomDiv);
+        deleteIcon.parentElement.remove();
+        console.log(deleteIcon.parentElement)
     });
 
     roomDiv.appendChild(hotelSelect);
