@@ -17,17 +17,18 @@ document.addEventListener('DOMContentLoaded', function() {
 		var acompanantesSection = document.getElementById('acompanantes_section');
 		acompanantesSection.style.display = numAcompanantes > 0 ? 'block' : 'none';
 	});
-	
-	// Evento para agregar una nueva habitación
-    document.getElementById('add_room').addEventListener('click', function () {
-        createRoomSection();
-    });
-
-    // Crear la primera sección de habitación al cargar la página
-    createRoomSection();
-
+	document.getElementById('hotel').addEventListener('click', function () {
+		var hotelSection = document.getElementById('hotel_section');
+		var isHotel = this.value;
+		hotelSection.style.display = numAcompanantes === "si" ? 'block' : 'none';
+		// Evento para agregar una nueva habitación
+	    	document.getElementById('add_room').addEventListener('click', function () {
+	        	createRoomSection();
+	    	});
+		// Crear la primera sección de habitación al cargar la página
+    		createRoomSection();
+	});	
 });
-
 
 function enviarFormulario() {
     // Deshabilita el botón para evitar clics repetidos
@@ -103,7 +104,6 @@ function createRoomSection() {
         const hotelSelect = document.createElement('select');
         hotelSelect.setAttribute('name', 'tipo_hotel[]');
         hotelSelect.innerHTML = `
-            <option value="">Selecciona</option>
             <option value="hotel">Hotel</option>
             <option value="apartamento">Apartamento</option>
         `;
