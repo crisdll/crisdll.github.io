@@ -28,8 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
 			console.log("on click add Room")
 	        	createRoomSection();
 	    	});
-		// Crear la primera sección de habitación al cargar la página
-    		createRoomSection();
 	});	
 });
 
