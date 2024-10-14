@@ -22,7 +22,9 @@ document.addEventListener('DOMContentLoaded', function() {
 		var hotelSection = document.getElementById('hotel_section');
 		var isHotel = this.value;
 		hotelSection.style.display = isHotel === "si" ? 'block' : 'none';
-		createRoomSection();
+		if (isHotel === "si" && document.getElementById('tipo_hotel').childElementCount === 0) {
+		        createRoomSection();
+		    }
 		// Evento para agregar una nueva habitación
 	    	document.getElementById('add_room').addEventListener('click', function () {
 			console.log("on click add Room")
