@@ -269,3 +269,7 @@ form >div:last-child{
     bottom: 0;
     right: 0;
 }
+.room-section > select{
+	margin: 0px 10px 0px 10px;
+	display:flex;
+}
