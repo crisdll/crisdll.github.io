@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		var acompanantesSection = document.getElementById('acompanantes_section');
 		acompanantesSection.style.display = numAcompanantes > 0 ? 'block' : 'none';
 	});
-	document.getElementById('hotel').addEventListener(''change', function () {
+	document.getElementById('hotel').addEventListener('change', function () {
 		console.log("on click hotel")
 		var hotelSection = document.getElementById('hotel_section');
 		var isHotel = this.value;
