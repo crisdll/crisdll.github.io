@@ -57,11 +57,16 @@
     </div>
 
       <!-- Opciones de transporte -->
-    <label id="transporte_label" for="transporte">¿Necesitas transporte?</label>
+    <label id="transporte_label" for="transporte">¿Necesitas transporte?
+	 <span class="info-icon" onmouseover="mostrarInfo('transporteInfo')" onmouseout="ocultarInfo('transporteInfo')">ℹ️</span>
+    </label>
   <select id="transporte" name="transporte">
     <option value="no">No</option>
     <option value="si">Si</option>
   </select>
+<div id="hotelInfo" class="info-text" style="display: none;">
+  Aquí puedes especificar si necesitas alojamiento y el tipo de habitaciones.
+</div>
 
 	<!-- Opciones de hotel -->
   <label id="hotel_label" for="transporte">¿Necesitas alojamiento?</label>
