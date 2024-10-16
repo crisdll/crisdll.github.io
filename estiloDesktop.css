@@ -237,6 +237,7 @@ nav {
 	#alojarse img,
 	#actividades img {
 		max-height: 440px;
+        	min-height: 336px;
 	}
 
 	#llegar .mapa	 {
