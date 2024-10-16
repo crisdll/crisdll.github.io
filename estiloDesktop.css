@@ -59,7 +59,7 @@ nav {
 	}
 	
 	p a {
-      padding: 30px 0px; 
+      padding: 30px 0px 0px 0px; 
     }
 	
 	button{
@@ -225,7 +225,7 @@ nav {
 
 	#alojarse > p,
 	#actividades > p {
-		padding: 0px 70px 30px 70px;
+		padding: 30px 70px;
 	}
 
 
