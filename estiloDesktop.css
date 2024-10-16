@@ -232,6 +232,7 @@ nav {
 	#alojarse > div > div > div,
 	#actividades > div > div >div{
 		max-width: 345px;
+		height: fit-content;
 	}
 	#alojarse img,
 	#actividades img {
