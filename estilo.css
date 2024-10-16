@@ -230,6 +230,7 @@ section {
 		justify-content:space-between;
 		width:100%
 	}
+#alojarse > div > div{border-bottom:solid;}
 
 
 /**********************Formulario ************************/
