@@ -252,6 +252,9 @@ nav {
 	#actividades a{
 		margin-bottom:20px
 	}
+	#alojarse > p {
+		padding: 20px ;
+	}
 /**********************Formulario ************************/
     form {
       max-width: 90%;
