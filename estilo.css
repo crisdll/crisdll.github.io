@@ -232,7 +232,7 @@ section {
 	}
 #alojarse > div > div{border-bottom:solid;}
 
-#alojarse > p  {
+#alojarse > p:last-child {
         font-style: italic;
         font-size: small;
 }
