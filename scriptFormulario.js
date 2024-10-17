@@ -36,35 +36,52 @@ function enviarFormulario() {
     var botonEnviar = document.querySelector('button[type="button"]');
     botonEnviar.disabled = true;
 
-    // Muestra un icono de carga o mensaje de "pensando"
+    // Muestra un icono de carga o mensaje de "Enviando..."
     var respuestaDiv = document.getElementById('respuesta');
     respuestaDiv.classList.add('form-tooltip');
     respuestaDiv.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Enviando...';
 
-
     // Obtiene los datos del formulario
     var formData = new FormData(document.getElementsByTagName('form')[0]);
-	// Convertir los resultados de formData.entries() en un array
-	var formDataArray = Array.from(formData.entries());
+    var formDataArray = Array.from(formData.entries());
 
-	// Ahora puedes acceder al length
-	console.log('Número de elementos en formData:', formDataArray);
+    // Agrupa los datos en el objeto groupedData
+    var groupedData = {}; // Inicializa groupedData
 
-	 for (var pair of formData.entries()) {
-		console.log(pair[0] + ': ' + pair[1]);
-	  }
+    for (var pair of formDataArray) {
+        var name = pair[0];
+        var value = pair[1];
 
-		// Realiza una solicitud AJAX para enviar los datos al script de Google Apps
-		var xhr = new XMLHttpRequest();
-		xhr.open('POST', 'https://script.google.com/macros/s/AKfycbzdoavOoxDTlXh-NpRc1HdRVZ0VDj9aQh6iZJxMBo7HEXcjPAI2HnTUpEfJ-YxJZbew/exec', true);
-		xhr.onload = function() {
-		  // Habilita el botón después de la respuesta
-		  botonEnviar.disabled = false;
+        // Si el nombre ya existe en el objeto, agrega el valor al array
+        if (groupedData[name]) {
+            groupedData[name].push(value);
+        } else {
+            // Si el nombre no existe, crea un nuevo array con el primer valor
+            groupedData[name] = [value];
+        }
+    }
 
-		  // Muestra la respuesta en el div
-		  respuestaDiv.innerHTML = xhr.responseText;
-		};
-		xhr.send(formData);
+    // Ahora 'groupedData' tiene los campos agrupados en arrays si hay valores múltiples
+    console.log(groupedData);
+
+    // Convierte groupedData a JSON para enviar al servidor
+    var jsonData = JSON.stringify(groupedData);
+
+    // Realiza una solicitud AJAX para enviar los datos al script de Google Apps
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'https://script.google.com/macros/s/AKfycbzdoavOoxDTlXh-NpRc1HdRVZ0VDj9aQh6iZJxMBo7HEXcjPAI2HnTUpEfJ-YxJZbew/exec', true);
+    xhr.setRequestHeader('Content-Type', 'application/json'); // Asegura que la solicitud sea enviada como JSON
+
+    xhr.onload = function() {
+        // Habilita el botón después de la respuesta
+        botonEnviar.disabled = false;
+
+        // Muestra la respuesta en el div
+        respuestaDiv.innerHTML = xhr.responseText;
+    };
+
+    // Envía la solicitud con los datos JSON
+    xhr.send(jsonData);
 }
 
 function validarFormulario() {
