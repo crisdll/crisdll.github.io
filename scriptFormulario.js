@@ -67,21 +67,34 @@ function enviarFormulario() {
     // Convierte groupedData a JSON para enviar al servidor
     var jsonData = JSON.stringify(groupedData);
 
-    // Realiza una solicitud AJAX para enviar los datos al script de Google Apps
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://script.google.com/macros/s/AKfycbzpP5hQi8jFeIwyRLx8F6srlHRo22NIjQGNOG2YP9NWnswOXg9WME5s4xoOCTW6Qq-h/exec', true);
-    xhr.setRequestHeader('Content-Type', 'application/json'); // Asegura que la solicitud sea enviada como JSON
+// Realiza una solicitud AJAX para enviar los datos al script de Google Apps
+var xhr = new XMLHttpRequest();
+xhr.open('POST', 'https://script.google.com/macros/s/AKfycbziEQ01Ubfic2l24qOcQjD8hnFXq8lx72c_v-AeNNuhGVy1lcpkDj2ac_vsZMxeC-qH/exec', true);
+xhr.setRequestHeader('Content-Type', 'application/json'); // Asegura que la solicitud sea enviada como JSON
 
-    xhr.onload = function() {
-        // Habilita el botón después de la respuesta
-        botonEnviar.disabled = false;
+xhr.onload = function() {
+    // Habilita el botón después de la respuesta
+    botonEnviar.disabled = false;
 
+    // Verifica si la respuesta es ok
+    if (xhr.status >= 200 && xhr.status < 300) {
+        // Analiza la respuesta JSON
+        var response = JSON.parse(xhr.responseText);
         // Muestra la respuesta en el div
-        respuestaDiv.innerHTML = xhr.responseText;
-    };
+        respuestaDiv.innerHTML = response.result; // Asegúrate de que la respuesta contenga un campo 'result'
+    } else {
+        respuestaDiv.innerHTML = 'Error al enviar datos: ' + xhr.statusText; // Manejo de errores
+    }
+};
 
-    // Envía la solicitud con los datos JSON
-    xhr.send(jsonData);
+xhr.onerror = function() {
+    // Habilita el botón en caso de error
+    botonEnviar.disabled = false;
+    respuestaDiv.innerHTML = 'Error en la solicitud.';
+};
+
+// Envía la solicitud con los datos JSON
+xhr.send(jsonData);
 }
 
 function validarFormulario() {
