@@ -94,6 +94,7 @@ xhr.onerror = function() {
 };
 
 // Envía la solicitud con los datos JSON
+console.log(jsonData); // Para ver el contenido que estás enviando
 xhr.send(jsonData);
 }
 
