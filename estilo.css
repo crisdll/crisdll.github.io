@@ -290,3 +290,9 @@ form >div:last-child{
         width: 50px;
 }
 
+.info-text{
+    font-size: small;
+    color: grey;
+    font-style: italic;
+    padding-top: 5px;
+}
