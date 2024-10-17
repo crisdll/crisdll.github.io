@@ -47,7 +47,9 @@
       <option value="no">No, no podré asistir</option>
     </select>
 
-    <label for="num_acompanantes">Número de acompañantes:</label>
+    <label for="num_acompanantes">Número de acompañantes:
+	<div class="info-text"> ¡Cuéntanos cuántos vienen contigo! Incluye a todos, incluso a los más pequeños que no se van a comer nada, porque cada rincón cuenta 😉. Aunque, entre nosotros, la celebración está pensada para adultos, así que ¡siente la libertad de venir solo y disfrutar al máximo! 🎉</div>
+	</label>
     <input type="number" id="num_acompanantes" name="num_acompanantes" min="0" value="0" required>
     
     <!-- Sección para los nombres de los acompañantes -->
@@ -57,25 +59,25 @@
     </div>
 
       <!-- Opciones de transporte -->
-    <label id="transporte_label" for="transporte">¿Necesitas transporte?
-	 <span class="info-icon" onmouseover="mostrarInfo('transporteInfo')" onmouseout="ocultarInfo('transporteInfo')">ℹ️</span>
+    <label id="transporte_label" for="transporte">¿Necesitas transporte? 
+	<div class="info-text"> Vamos a facilitar un transporte desde Calella hasta el lugar de la celebración. El precio variará entre X y Y, dependiendo del número de personas interesadas. Si estás interesado en esta opción, indícalo aquí para que podamos organizar mejor el servicio. Una vez tengamos la información, te enviaremos más detalles sobre el costo y la ubicación exacta de recogida.</div>
     </label>
   <select id="transporte" name="transporte">
     <option value="no">No</option>
     <option value="si">Si</option>
   </select>
-<div id="transporteInfo" class="info-text" style="display: none;">
-  Aquí puedes especificar si necesitas alojamiento y el tipo de habitaciones.
-</div>
+
 
 	<!-- Opciones de hotel -->
-  <label id="hotel_label" for="transporte">¿Necesitas alojamiento?</label>
+  <label id="hotel_label" for="transporte">¿Necesitas alojamiento?
+  	<div class="info-text"> Para más información, puedes consultar <a href="https://crisdll.github.io/viaje&estancia#alojarse" target="_blank">esta</a> sección.</div>
+  </label>
   <select id="hotel" name="hotel">
     <option value="no">No/Buscaré por mi cuenta</option>
     <option value="si">Si</option>
   </select>
 
-<!-- Sección para los nombres de los acompañantes -->
+<!-- Sección para las habitaciones -->
 <div id="hotel_section" style="display: none;">
     <label for="tipo_hotel">Añade las habitaciones que necesites:</label>
     <div id="tipo_hotel"></div>
