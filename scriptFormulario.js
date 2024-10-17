@@ -195,11 +195,3 @@ function updatePersonOptions(tipoHabitacion, personSelect) {
 	personSelect.style.maxWidth= '45px';
     }
 }
-
-function mostrarInfo(infoId) {
-  document.getElementById(infoId).style.display = 'block';
-}
-
-function ocultarInfo(infoId) {
-  document.getElementById(infoId).style.display = 'none';
-}
