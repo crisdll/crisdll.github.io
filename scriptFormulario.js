@@ -32,71 +32,52 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function enviarFormulario() {
-    // Deshabilita el botón para evitar clics repetidos
     var botonEnviar = document.querySelector('button[type="button"]');
     botonEnviar.disabled = true;
 
-    // Muestra un icono de carga o mensaje de "Enviando..."
     var respuestaDiv = document.getElementById('respuesta');
     respuestaDiv.classList.add('form-tooltip');
     respuestaDiv.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Enviando...';
 
-    // Obtiene los datos del formulario
     var formData = new FormData(document.getElementsByTagName('form')[0]);
     var formDataArray = Array.from(formData.entries());
-
-    // Agrupa los datos en el objeto groupedData
-    var groupedData = {}; // Inicializa groupedData
+    var groupedData = {};
 
     for (var pair of formDataArray) {
         var name = pair[0];
         var value = pair[1];
-
-        // Si el nombre ya existe en el objeto, agrega el valor al array
         if (groupedData[name]) {
             groupedData[name].push(value);
         } else {
-            // Si el nombre no existe, crea un nuevo array con el primer valor
             groupedData[name] = [value];
         }
     }
 
-    // Ahora 'groupedData' tiene los campos agrupados en arrays si hay valores múltiples
-    console.log(groupedData);
-
-    // Convierte groupedData a JSON para enviar al servidor
     var jsonData = JSON.stringify(groupedData);
+    console.log(jsonData); // Para ver el contenido que estás enviando
 
-// Realiza una solicitud AJAX para enviar los datos al script de Google Apps
-var xhr = new XMLHttpRequest();
-xhr.open('POST', 'https://script.google.com/macros/s/AKfycbxrY4br2BWwU8VyZBj2Ju6JsiuWd5FOr4uRWugfPdXE8TX2_NG-Kf6Y0OvpGRVm6Z1Y/exec', true);
-xhr.setRequestHeader('Content-Type', 'application/json'); // Asegura que la solicitud sea enviada como JSON
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'https://script.google.com/macros/s/AKfycbxnLxzCEDE_g8zqBLXUShjbE-lFbtyTnkmFE4W3Q1b904qEY6t37tiyQvrbi_tw6Y2u/exec', true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
 
-xhr.onload = function() {
-    // Habilita el botón después de la respuesta
-    botonEnviar.disabled = false;
+    xhr.onload = function() {
+        botonEnviar.disabled = false;
+        if (xhr.status >= 200 && xhr.status < 300) {
+            var response = JSON.parse(xhr.responseText);
+            respuestaDiv.innerHTML = response.result; // Asegúrate de que la respuesta contenga un campo 'result'
+        } else {
+            respuestaDiv.innerHTML = 'Error al enviar datos: ' + xhr.statusText + ' - ' + xhr.responseText; // Manejo de errores mejorado
+        }
+    };
 
-    // Verifica si la respuesta es ok
-    if (xhr.status >= 200 && xhr.status < 300) {
-        // Analiza la respuesta JSON
-        var response = JSON.parse(xhr.responseText);
-        // Muestra la respuesta en el div
-        respuestaDiv.innerHTML = response.result; // Asegúrate de que la respuesta contenga un campo 'result'
-    } else {
-        respuestaDiv.innerHTML = 'Error al enviar datos: ' + xhr.statusText; // Manejo de errores
-    }
-};
+    xhr.onerror = function() {
+        botonEnviar.disabled = false;
+        respuestaDiv.innerHTML = 'Error en la solicitud.';
+    };
 
-xhr.onerror = function() {
-    // Habilita el botón en caso de error
-    botonEnviar.disabled = false;
-    respuestaDiv.innerHTML = 'Error en la solicitud.';
-};
-
-// Envía la solicitud con los datos JSON
-console.log(jsonData); // Para ver el contenido que estás enviando
-xhr.send(jsonData);
+    xhr.send(jsonData);
 }
+
 
 function validarFormulario() {
             // Obtener el valor del campo de nombre completo
