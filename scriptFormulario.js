@@ -39,44 +39,32 @@ function enviarFormulario() {
     respuestaDiv.classList.add('form-tooltip');
     respuestaDiv.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Enviando...';
 
+    // Obtiene los datos del formulario
     var formData = new FormData(document.getElementsByTagName('form')[0]);
-    var formDataArray = Array.from(formData.entries());
-    var groupedData = {};
 
-    for (var pair of formDataArray) {
-        var name = pair[0];
-        var value = pair[1];
-        if (groupedData[name]) {
-            groupedData[name].push(value);
-        } else {
-            groupedData[name] = [value];
-        }
+    // Opcional: Imprimir los datos del formulario en la consola
+    var formDataArray = Array.from(formData.entries());
+    console.log('Número de elementos en formData:', formDataArray.length);
+    for (var pair of formData.entries()) {
+        console.log(pair[0] + ': ' + pair[1]);
     }
 
-    var jsonData = JSON.stringify(groupedData);
-    console.log(jsonData); // Para ver el contenido que estás enviando
-
+    // Realiza una solicitud AJAX para enviar los datos al script de Google Apps
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://script.google.com/macros/s/AKfycbxnLxzCEDE_g8zqBLXUShjbE-lFbtyTnkmFE4W3Q1b904qEY6t37tiyQvrbi_tw6Y2u/exec', true);
-    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.open('POST', 'https://script.google.com/macros/s/AKfycbzwoYIxf3FbBuT2L5u98pUVjTuaXYGN6P20zneAVYEnkUIPch7iT1bSi3uK0iqC0f9t/exec', true);
 
     xhr.onload = function() {
+        // Habilita el botón después de la respuesta
         botonEnviar.disabled = false;
-        if (xhr.status >= 200 && xhr.status < 300) {
-            var response = JSON.parse(xhr.responseText);
-            respuestaDiv.innerHTML = response.result; // Asegúrate de que la respuesta contenga un campo 'result'
-        } else {
-            respuestaDiv.innerHTML = 'Error al enviar datos: ' + xhr.statusText + ' - ' + xhr.responseText; // Manejo de errores mejorado
-        }
+
+        // Muestra la respuesta en el div
+        respuestaDiv.innerHTML = xhr.responseText; // El cuerpo de la respuesta se muestra aquí
     };
 
-    xhr.onerror = function() {
-        botonEnviar.disabled = false;
-        respuestaDiv.innerHTML = 'Error en la solicitud.';
-    };
-
-    xhr.send(jsonData);
+    // Envía la solicitud con los datos del formulario
+    xhr.send(formData);
 }
+
 
 
 function validarFormulario() {
