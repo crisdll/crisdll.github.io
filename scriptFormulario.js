@@ -128,9 +128,11 @@ function createRoomSection() {
         <option value="hotel">Hotel</option>
         <option value="apartamento">Apartamento</option>
     `;
-    hotelSelect.addEventListener('change', function () {
-        updateRoomTypeOptions(hotelSelect.value, roomDiv);
-    });
+    hotelSelect.addEventListener('change', (function(lineas) {
+	    return function () {
+	        updateRoomTypeOptions(hotelSelect.value, roomDiv, lineas);
+	    };
+	})(contadorLineas));
 
     const roomTypeSelect = document.createElement('select');
     roomTypeSelect.setAttribute('name', 'tipo_habitacion'+contadorLineas);
@@ -159,13 +161,15 @@ function createRoomSection() {
     roomDiv.appendChild(deleteIcon);
 
     document.getElementById('tipo_hotel').appendChild(roomDiv);
-    updateRoomTypeOptions(hotelSelect.value, roomDiv);
+    updateRoomTypeOptions(hotelSelect.value, roomDiv,contadorLineas);
     contadorLineas++;
 }
 
 // Función para actualizar las opciones de tipo de habitación según la categoría
-function updateRoomTypeOptions(hotelType, roomDiv) {
-    const roomTypeSelect = roomDiv.querySelector('select[name="tipo_habitacion'+contadorLineas+'"]');
+function updateRoomTypeOptions(hotelType, roomDiv,lineas) {
+console.log(roomDiv)
+console.log('select[name="tipo_habitacion'+lineas+'"]');
+    const roomTypeSelect = roomDiv.querySelector('select[name="tipo_habitacion'+lineas+'"]');
     roomTypeSelect.innerHTML = '';
 
     // Filtrar las opciones según la categoría (hotel o apartamento)
