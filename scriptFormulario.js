@@ -165,7 +165,7 @@ function createRoomSection() {
 
 // Función para actualizar las opciones de tipo de habitación según la categoría
 function updateRoomTypeOptions(hotelType, roomDiv) {
-    const roomTypeSelect = roomDiv.querySelector('select[name="tipo_habitacion[]"]');
+    const roomTypeSelect = roomDiv.querySelector('select[name="tipo_habitacion'+contadorLineas+'"]');
     roomTypeSelect.innerHTML = '';
 
     // Filtrar las opciones según la categoría (hotel o apartamento)
