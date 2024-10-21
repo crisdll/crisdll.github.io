@@ -116,13 +116,14 @@ const maxPersonasPorHabitacion = {
     'Apartamento 2 Habitaciones Terraza': { max: 6, categoria: 'apartamento' }
 };
 
+var contadorLineas = 1; // Inicializa el contador en 1
 // Función para crear una nueva sección de habitación
 function createRoomSection() {
     const roomDiv = document.createElement('div');
     roomDiv.classList.add('room-section');
 
     const hotelSelect = document.createElement('select');
-    hotelSelect.setAttribute('name', 'tipo_hotel[]');
+    hotelSelect.setAttribute('name', 'tipo_hotel'+contadorLineas);
     hotelSelect.innerHTML = `
         <option value="hotel">Hotel</option>
         <option value="apartamento">Apartamento</option>
@@ -132,13 +133,13 @@ function createRoomSection() {
     });
 
     const roomTypeSelect = document.createElement('select');
-    roomTypeSelect.setAttribute('name', 'tipo_habitacion[]');
+    roomTypeSelect.setAttribute('name', 'tipo_habitacion'+contadorLineas);
     roomTypeSelect.addEventListener('change', function () {
         updatePersonOptions(roomTypeSelect.value, personSelect);
     });
 
     const personSelect = document.createElement('select');
-    personSelect.setAttribute('name', 'num_personas[]');
+    personSelect.setAttribute('name', 'num_personas'+contadorLineas);
 
     const deleteIcon = document.createElement('span');
     deleteIcon.classList.add('material-icons');
@@ -149,6 +150,7 @@ function createRoomSection() {
     deleteIcon.style.fontSize = '22px';
     deleteIcon.addEventListener('click', function () {
         deleteIcon.parentElement.remove();
+	    contadorLineas--;
     });
 
     roomDiv.appendChild(hotelSelect);
@@ -158,6 +160,7 @@ function createRoomSection() {
 
     document.getElementById('tipo_hotel').appendChild(roomDiv);
     updateRoomTypeOptions(hotelSelect.value, roomDiv);
+    contadorLineas++;
 }
 
 // Función para actualizar las opciones de tipo de habitación según la categoría
