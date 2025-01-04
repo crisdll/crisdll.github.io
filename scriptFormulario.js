@@ -52,7 +52,7 @@ function enviarFormulario() {
 
     // Realiza una solicitud AJAX para enviar los datos al script de Google Apps
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://script.google.com/macros/s/AKfycbwCOMzthsZlRKpuo_ltwKJot7huADOcgJhcVlmumdIjBNM49R6muyyRWfMRwtzpOXPu/exec', true);
+    xhr.open('POST', 'https://script.google.com/macros/s/AKfycbyKueMpjIoDc2lO2-u_USgc70uwVfBPyX2z7eGvA-YmesQpu-iT6upyxZ2wg0j7CstT/exec', true);
 
     xhr.onload = function() {
         // Habilita el botón después de la respuesta
