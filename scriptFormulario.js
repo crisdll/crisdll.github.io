@@ -46,7 +46,7 @@ function enviarFormulario() {
     var formDataArray = Array.from(formData.entries());
     console.log('Número de elementos en formData:', formDataArray.length);
     for (var pair of formData.entries()) {
-	console.log("form data');
+	console.log("form data");
         console.log(pair[0] + ': ' + pair[1]);
     }
 
